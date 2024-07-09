@@ -262,134 +262,68 @@ textarea.formInput {
                            class="dropdown-menu"
                            aria-labelledby="dropdownMenuButton"
                          >
-                           <li><a class="dropdown-item" href="#">Edit</a></li>
-                           <li><a class="dropdown-item" href="#">Delete</a></li>
-                         </ul>
-                       </div>
-                     </td>
-                   </tr>
-                   <!-- table row 2  -->
-                   <tr>
-                     <!-- Dropdown button   -->
-                     <td>INV-QAK-23-128</td>
-                     <td>25/02/2023</td>
-                     <td>Prominent star cont. LLC</td>
-                     <td>QAK-QTN-/022-0254</td>
-                     <td>16613.27</td>
-                     <td>16613.27</td>
-                     <td>
-                       <div class="dropdown">
-                         <button
-                           class="tableButton dropdown-toggle"
-                           type="button"
-                           id="dropdownMenuButton"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false"
-                         >
-                           Action
-                         </button>
-                         <ul
-                           class="dropdown-menu"
-                           aria-labelledby="dropdownMenuButton"
-                         >
-                           <li><a class="dropdown-item" href="#">Edit</a></li>
-                           <li><a class="dropdown-item" href="#">Delete</a></li>
-                         </ul>
-                       </div>
-                     </td>
-                   </tr>
-                   <!-- table row 3  -->
-                   <tr>
-                     <!-- Dropdown button   -->
-                     <td>INV-QAK-23-128</td>
-                     <td>25/02/2023</td>
-                     <td>Prominent star cont. LLC</td>
-                     <td>QAK-QTN-/022-0254</td>
-                     <td>16613.27</td>
-                     <td>16613.27</td>
-                     <td>
-                       <div class="dropdown">
-                         <button
-                           class="tableButton dropdown-toggle"
-                           type="button"
-                           id="dropdownMenuButton"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false"
-                         >
-                           Action
-                         </button>
-                         <ul
-                           class="dropdown-menu"
-                           aria-labelledby="dropdownMenuButton"
-                         >
-                           <li><a class="dropdown-item" href="#">Edit</a></li>
-                           <li><a class="dropdown-item" href="#">Delete</a></li>
-                         </ul>
-                       </div>
-                     </td>
-                   </tr>
-                   <!-- table row 4  -->
-                   <tr>
-                     <!-- Dropdown button   -->
-                     <td>INV-QAK-23-128</td>
-                     <td>25/02/2023</td>
-                     <td>Prominent star cont. LLC</td>
-                     <td>QAK-QTN-/022-0254</td>
-                     <td>16613.27</td>
-                     <td>16613.27</td>
-                     <td>
-                       <div class="dropdown">
-                         <button
-                           class="tableButton dropdown-toggle"
-                           type="button"
-                           id="dropdownMenuButton"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false"
-                         >
-                           Action
-                         </button>
-                         <ul
-                           class="dropdown-menu"
-                           aria-labelledby="dropdownMenuButton"
-                         >
-                           <li><a class="dropdown-item" href="#">Edit</a></li>
-                           <li><a class="dropdown-item" href="#">Delete</a></li>
-                         </ul>
-                       </div>
-                     </td>
-                   </tr>
-                   <!-- table row 5  -->
-                   <tr>
-                     <!-- Dropdown button   -->
-                     <td>INV-QAK-23-128</td>
-                     <td>25/02/2023</td>
-                     <td>Prominent star cont. LLC</td>
-                     <td>QAK-QTN-/022-0254</td>
-                     <td>16613.27</td>
-                     <td>16613.27</td>
-                     <td>
-                       <div class="dropdown">
-                         <button
-                           class="tableButton dropdown-toggle"
-                           type="button"
-                           id="dropdownMenuButton"
-                           data-bs-toggle="dropdown"
-                           aria-expanded="false"
-                         >
-                           Action
-                         </button>
-                         <ul
-                           class="dropdown-menu"
-                           aria-labelledby="dropdownMenuButton"
-                         >
-                           <li><a class="dropdown-item" href="#">Edit</a></li>
-                           <li><a class="dropdown-item" href="#">Delete</a></li>
+                           <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Edit
+                            </button>
+                           </li>
+                           <li>
+                            <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                              Delete
+                            </button>
+                           </li>
                          </ul>
                        </div>
                      </td>
                    </tr>
                  </tbody>
                </table>
+               <!--Edit Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Input</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group  mb-3">
+            <label for="cashOutDebit">CashOut Debit:</label>
+            <input type="text" class="formInput" id="cashOutDebit" placeholder="Enter amount" required>
+          </div>
+          <div class="form-group  mb-3">
+            <label for="cashInCredit">CashIn Credit:</label>
+            <input type="text" class="formInput" id="cashInCredit" placeholder="Enter amount" required>
+          </div>
+          <div class="form-group  mb-3">
+            <label for="description">Description:</label>
+            <input type="text" class="formInput" id="description" placeholder="Enter description" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn tableButton" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn tableButton">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Delete Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel ">Do You Agree?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn tableButton">Yes</button>
+        <button type="button" class="btn tableButton">No</button>
+      </div>
+    </div>
+  </div>
+</div>
              </div>
           </div>
 </body>
