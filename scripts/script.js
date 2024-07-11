@@ -13,12 +13,12 @@ document.getElementById('menuButton').addEventListener('click', function() {
 // });
 
 const sidebarToggle = document.getElementById('sidebarToggle');
-const sidebar = document.getElementById('sidebar');
 const mainContent = document.querySelector('.flex-grow-1');
+const sidebar = document.getElementById('sidebar');
 
 sidebarToggle.addEventListener('click', function() {
+    mainContent.classList.toggle('main-content-expanded');
   sidebar.classList.toggle('sidebar-expanded');
-  mainContent.classList.toggle('main-content-expanded');
 });
 
 

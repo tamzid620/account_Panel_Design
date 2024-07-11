@@ -93,7 +93,6 @@ header {
 
 .sidebar-expanded {
   width: 250px;
-  
 }
 
 .list-group {
@@ -114,20 +113,21 @@ header {
     margin-left: 0;
   }
   .main-content-expanded {
+    
     margin-left: 0px;
   }
   .sidebar-expanded {
+   
     margin-left: -280px;
 }
 }
 
 @media (min-width: 992px) {
   .sidebar-hidden {
-    display: block !important; /* Show on larger devices */
+    display: block !important;
   }
 }
 @media (max-width: 991px) {
-  /* Hide the menu button on medium and small devices */
   .menu-button {
     display: none;
     display: flex;
