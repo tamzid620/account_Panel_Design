@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TextIInvoice Data3 Input</title>
+  </head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice-box {
+            /* max-width: 800px; */
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #eee;
+            background-color: #f3f1f1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            line-height: 24px;
+            color: #555;
+        }
+        .parentInput{
+            margin-left: 15px;
+            padding: 5px;
+            width: 230px;
+        }
+        .childInput{
+            margin-left: 40px;
+            padding: 5px;
+            width: 230px;
+        }
+        textarea {
+        width: 100%;
+        height: 100px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-section div {
+            display: inline-block;
+        }
+        .heading {
+            font-weight: 700;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+
+  <body>
+    <div class="invoice-box">
+      <div class="header-section">
+          <div>
+              <h7 class="heading">Ref.No: <input class="parentInput" type="text" name="" id=""><br><br>
+                Date: <input class="parentInput" type="date" name="" id="">
+          </div>
+      </div>
+      <p class="heading">M/S: <input class="parentInput" type="text" name="" id=""><br><br>
+        P.O Box: <input class="parentInput" type="text" name="" id=""><br><br>
+        Tel: <input class="parentInput" type="number" name="" id=""><br><br>
+        Email: <input class="parentInput" type="email" name="" id=""></p>
+      <p class="heading">Kind Attn: <input class="parentInput" type="text" name="" id=""><br><br>
+        Project Name: <input class="parentInput" type="text" name="" id=""></p><br>
+
+      <p>Dear Sir,</p>
+      <p >With reference to your inquiry, we are pleased to offer our quotation for the subject items. We welcome the opportunity to provide this business solution for you and look forward to establishing a mutually rewarding relationship with your esteemed organization.</p>
+      <p class="heading">Scope of Works:</p>
+      <table>
+          <tr>
+              <th>Sl No.</th>
+              <th>Work Description</th>
+              <th>Qty</th>
+              <th>Unit</th>
+              <th>Unit Rate</th>
+              <th>Total Amount</th>
+          </tr>
+          <tr>
+              <td>1.</td>
+              <td>
+                  <p class="heading">AC work:</p>
+                  <ul>
+                    <textarea id="myTextArea1" placeholder="write something"></textarea>
+                  </ul>
+                  <p>Note:</p>
+                  <ul>
+                    <textarea id="myTextArea2" placeholder="write something"></textarea>
+                  </ul>
+                  <p><input class="childInput" type="text" name="" id=""></p>
+              </td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+          </tr>
+          <tr>
+              <td>2.</td>
+              <td>
+                  <p class="heading">Gypsum & painting work:</p>
+                  <ul>
+                    <textarea id="myTextArea3" placeholder="write something"></textarea>
+                  </ul>
+                  <p>Note: 
+                    <textarea id="myTextArea" placeholder="write something"></textarea>
+                  </p>
+              </td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+          </tr>
+      </table>
+  </div>
+
+  <!-- Bullet point script  -->
+  <script>
+    const textarea1 = document.getElementById('myTextArea1');
+    const textarea2 = document.getElementById('myTextArea2');
+    const textarea3 = document.getElementById('myTextArea3');
+    
+    textarea1.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        const value = this.value;
+        const lines = value.split('\n');
+        const currentLineIndex = getCurrentLineIndex(this);
+        const currentLine = lines[currentLineIndex];
+    
+        if (isBulletPoint(currentLine)) {
+          // Remove bullet point if current line starts with '- '
+          lines[currentLineIndex] = currentLine.slice(2); // Remove '- '
+        } else {
+          // Insert bullet point if current line doesn't start with '- '
+          lines.splice(currentLineIndex, 0, '• ');
+        }
+    
+        this.value = lines.join('\n');
+        this.selectionStart = this.selectionEnd = getNewCursorPosition(currentLineIndex, currentLine, isBulletPoint(currentLine));
+      }
+    });
+    
+    function getCurrentLineIndex(textarea1) {
+      return textarea1.value.substr(0, textarea1.selectionStart).split('\n').length - 1;
+    }
+    
+    function isBulletPoint(line) {
+      return /^ /.test(line.trim());
+    }
+    
+    function getNewCursorPosition(currentLineIndex, currentLine, isBullet) {
+      if (isBullet) {
+        // If there was a bullet point, move cursor to beginning of the line
+        return currentLineIndex * 2; // Assuming '- ' is 2 characters long
+      } else {
+        // If there was no bullet point, move cursor to after the inserted bullet point
+        return (currentLineIndex + 1) * 2; // Assuming '- ' is 2 characters long
+      }
+    }
+// ------------------------------------------------------------------------------------------------------------   
+    textarea2.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        const value = this.value;
+        const lines = value.split('\n');
+        const currentLineIndex = getCurrentLineIndex(this);
+        const currentLine = lines[currentLineIndex];
+    
+        if (isBulletPoint(currentLine)) {
+          // Remove bullet point if current line starts with '- '
+          lines[currentLineIndex] = currentLine.slice(2); // Remove '- '
+        } else {
+          // Insert bullet point if current line doesn't start with '- '
+          lines.splice(currentLineIndex, 0, '• ');
+        }
+    
+        this.value = lines.join('\n');
+        this.selectionStart = this.selectionEnd = getNewCursorPosition(currentLineIndex, currentLine, isBulletPoint(currentLine));
+      }
+    });
+    
+    function getCurrentLineIndex(textarea2) {
+      return textarea2.value.substr(0, textarea2.selectionStart).split('\n').length - 1;
+    }
+    
+    function isBulletPoint(line) {
+      return /^ /.test(line.trim());
+    }
+    
+    function getNewCursorPosition(currentLineIndex, currentLine, isBullet) {
+      if (isBullet) {
+        // If there was a bullet point, move cursor to beginning of the line
+        return currentLineIndex * 2; // Assuming '- ' is 2 characters long
+      } else {
+        // If there was no bullet point, move cursor to after the inserted bullet point
+        return (currentLineIndex + 1) * 2; // Assuming '- ' is 2 characters long
+      }
+    }
+// ------------------------------------------------------------------------------------------------
+    textarea3.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        const value = this.value;
+        const lines = value.split('\n');
+        const currentLineIndex = getCurrentLineIndex(this);
+        const currentLine = lines[currentLineIndex];
+    
+        if (isBulletPoint(currentLine)) {
+          // Remove bullet point if current line starts with '- '
+          lines[currentLineIndex] = currentLine.slice(2); // Remove '- '
+        } else {
+          // Insert bullet point if current line doesn't start with '- '
+          lines.splice(currentLineIndex, 0, '• ');
+        }
+    
+        this.value = lines.join('\n');
+        this.selectionStart = this.selectionEnd = getNewCursorPosition(currentLineIndex, currentLine, isBulletPoint(currentLine));
+      }
+    });
+    
+    function getCurrentLineIndex(textarea3) {
+      return textarea3.value.substr(0, textarea3.selectionStart).split('\n').length - 1;
+    }
+    
+    function isBulletPoint(line) {
+      return /^ /.test(line.trim());
+    }
+    
+    function getNewCursorPosition(currentLineIndex, currentLine, isBullet) {
+      if (isBullet) {
+        // If there was a bullet point, move cursor to beginning of the line
+        return currentLineIndex * 2; // Assuming '- ' is 2 characters long
+      } else {
+        // If there was no bullet point, move cursor to after the inserted bullet point
+        return (currentLineIndex + 1) * 2; // Assuming '- ' is 2 characters long
+      }
+    }
+    </script>
+  </body>
+</html>
