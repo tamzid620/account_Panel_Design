@@ -8,13 +8,10 @@ document.getElementById('menuButton').addEventListener('click', function() {
     }
 });
 
-// document.getElementById('sidebarToggle').addEventListener('click', function() {
-//     document.getElementById('sidebar').classList.toggle('sidebar-hidden');
-// });
-
 const sidebarToggle = document.getElementById('sidebarToggle');
 const mainContent = document.querySelector('.flex-grow-1');
-const sidebar = document.getElementById('sidebar');
+const sidebar = document.querySelector('.sidebar-hidden');
+// const sidebar = document.getElementById('sidebar');
 
 sidebarToggle.addEventListener('click', function() {
     mainContent.classList.toggle('main-content-expanded');

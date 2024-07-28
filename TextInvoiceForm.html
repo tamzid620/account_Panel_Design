@@ -30,8 +30,23 @@
     }
     .invoice-header{
         margin-bottom: 50px;
+        
     }
-    
+    .invoiceDiv{
+        display: flex;
+        align-items: center;
+    }
+    .passMngIcon{
+        width: 50px;
+        background-color: rgba(128, 128, 128, 0.441);
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .passMngIcon:hover{
+        background-color: rgba(128, 128, 128, 0.635);
+    }
     .form-group {
         margin-bottom: 20px;
         display: flex;
@@ -84,6 +99,7 @@
     .addressScope{
         height: 150px;
     }
+   
     .invoice-section2 input{
         width: calc(100% - 16px); /* Adjust input width to fit within grid */
         padding: 8px;
@@ -152,6 +168,14 @@
         font-size: 14px;
         margin-left: -30px;
     }
+    .dateinput {
+        width: 100%; /* Ensure input fields take full width */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
     .form-group1Label{
         width: 60% ;
        
@@ -178,11 +202,14 @@
                     </div>
                     <div>
                         <label for="invoiceNo">Invoice No:</label>
-                        <input type="text" id="invoiceNo" name="invoiceNo" required>
+                        <div class="invoiceDiv">
+                            <input type="text" id="invoiceNo" name="invoiceNo" required>
+                            <img id="generateNumberIcon" class="passMngIcon" src="./assets/password-manager-icon.png" alt="">
+                        </div>
                     </div>
                     <div>
                         <label for="date">Date:</label>
-                        <input type="text" id="date" name="date" required>
+                        <input class="dateinput" type="date" id="date" name="date" required>
                     </div>
                 </div>
                 
@@ -309,5 +336,23 @@
             </form>
         </div>
     </div>
+    <!-- ************* auto generate number script ****************** -->
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * 1000000); 
+        }
+    
+        // Function to handle image click
+        function handleImageClick() {
+            const inputField = document.getElementById('invoiceNo');
+            inputField.value = generateRandomNumber();
+        }
+    
+        // Add event listener to the image
+        const generateNumberIcon = document.getElementById('generateNumberIcon');
+        generateNumberIcon.addEventListener('click', handleImageClick);
+    });
+    </script>
 </body>
 </html>
