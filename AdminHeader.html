@@ -120,25 +120,103 @@
         </div>
         <!--***************************** Main ****************************************** -->
         <div class="flex-grow-1 main-content-expanded p-3">
+          <div>
+ <!-- ((((((((((((((((((((((((((((((((( filterInputParentDiv ))))))))))))))))))))))))))))))))) -->
+ <div class="filterInputParentDiv bg-light p-3 rounded mb-5 mt-3">
+  <!-- filter dropdown section -->
+  <div class="filterDiv">
+    <h1 class="filterText mb-3">
+      <span>
+        <img class="filterImg" src="./assets/filter_icon.png" alt="" />
+      </span>
+      <span>Filters</span>
+    </h1>
+    <div class="w-50">
+      <select id="filterSelect" class="form-select" aria-label="Default select example">
+        <option value="1" selected>Date</option>
+        <option value="2">Month</option>
+        <option value="3">Invoice</option>
+        <option value="4">Client Name</option>
+        <option value="5">LPO</option>
+      </select>
+    </div>
+  </div>
+  
+  <!-- dynamic input fields -->
+  <div class="inputDiv">
+    <!-- <<<<<<<<<< date input field >>>>>>>>>> -->
+    <div id="dateField">
+      <h1 class="filterText">
+        <span>Date</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="date" name="date" id="dateInput">
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< month dropdown input field >>>>>>>>>> -->
+    <div id="monthField" style="display: none;">
+      <h1 class="filterText">
+        <span>Month</span>
+      </h1>
+      <div class="w-50">
+        <select class="form-select" aria-label="Default select example" id="monthSelect">
+          <option value="1" selected>January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< invoice input field >>>>>>>>>> -->
+    <div id="invoiceField" style="display: none;">
+      <h1 class="filterText">
+        <span>Invoice</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="text" name="invoice" id="invoiceInput">
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< client Name input field >>>>>>>>>> -->
+    <div id="clientNameField" style="display: none;">
+      <h1 class="filterText">
+        <span>Client Name</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="text" name="clientName" id="clientNameInput">
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< LPO input field >>>>>>>>>> -->
+    <div id="lpoField" style="display: none;">
+      <h1 class="filterText">
+        <span>LPO</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="text" name="lpo" id="lpoInput">
+      </div>
+    </div>
+  </div>
+  <!-- submit button -->
+  <div class="ms-3">
+    <button type="submit" class="submit-button">Submit</button>
+  </div>
+</div>
 
-          <div class=" bg-light p-3 rounded mb-5 mt-3">
-            <h1 class="filterText mb-3">
-              <span>
-                <img class="filterImg" src="./assets/filter_icon.png" alt=""
-              /></span>
-              <span>Filters</span>
-            </h1>
-            <div class="w-50">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>20-08-2024</option>
-                  <option value="1">25-08-2024</option>
-                  <option value="2">15-08-2024</option>
-                  <option value="3">10-08-2024</option>
-                </select>
-              </div>
+<!-- ((((((((((((((((((((((((((((((((( filterInputParentDiv ))))))))))))))))))))))))))))))))) -->
           </div>
 
-          <div class="bg-light p-3 rounded mb-5">
+          <div class=" bg-light p-3 rounded mb-5">
             <!-- button and filter section  -->
             <div class="mb-5 d-flex justify-content-between align-items-center gap-2">
               <!-- selector section  -->
@@ -408,7 +486,7 @@
             </table>
           </div>
 
-          <div style="font-family: 'Montserrat', sans-serif; font-weight: bold;" class="bg-light p-3 rounded mb-3 text-center lh-lg">
+          <div style="font-family: 'Montserrat', sans-serif; font-weight: bold;" class=" bg-light p-3 rounded mb-3 text-center lh-lg">
                 <p class="d-flex justify-content-between"><span>Total Bill Submitted :</span>  <span>570</span>  </p>
                 <p class="d-flex justify-content-between"><span>Total Amount REcieved :</span>  <span class="text-success">570</span>  </p>
                 <p class="d-flex justify-content-between"><span>Total OutStanding:</span>  <span class="text-danger">570</span>  </p>

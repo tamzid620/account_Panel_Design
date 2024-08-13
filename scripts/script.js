@@ -18,17 +18,44 @@ sidebarToggle.addEventListener('click', function() {
   sidebar.classList.toggle('sidebar-expanded');
 });
 
+// dynamic input fields ------------------------------ 
 
-// login page ----------------------------------
-function handleLogin() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    
-    if (email && password) {
-        console.log('Email:', email);
-        console.log('Password:', password);
-        alert('Login successful!');
-    } else {
-        alert('Please enter both email and password.');
-    }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const filterSelect = document.getElementById('filterSelect');
+    const dateField = document.getElementById('dateField');
+    const monthField = document.getElementById('monthField');
+    const invoiceField = document.getElementById('invoiceField');
+    const clientNameField = document.getElementById('clientNameField');
+    const lpoField = document.getElementById('lpoField');
+  
+    filterSelect.addEventListener('change', function() {
+      // Hide all fields initially
+      dateField.style.display = 'none';
+      monthField.style.display = 'none';
+      invoiceField.style.display = 'none';
+      clientNameField.style.display = 'none';
+      lpoField.style.display = 'none';
+      
+      // Show the selected field
+      const selectedValue = filterSelect.value;
+      
+      switch (selectedValue) {
+        case '1':
+          dateField.style.display = 'block';
+          break;
+        case '2':
+          monthField.style.display = 'block';
+          break;
+        case '3':
+          invoiceField.style.display = 'block';
+          break;
+        case '4':
+          clientNameField.style.display = 'block';
+          break;
+        case '5':
+          lpoField.style.display = 'block';
+          break;
+      }
+    });
+  });
+  

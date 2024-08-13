@@ -159,7 +159,7 @@ header {
   margin-right: 2px;
 }
 /*+++++++++++++++++++++++++++++++ Media query starts ++++++++++++++++++++++++++++++ */
-@media (max-width: 479px) {
+@media (max-width: 576px) {
   .navbar-collapse {
     display: none;
   }
@@ -204,8 +204,45 @@ header {
     display: block;
   }
 }
-
 /*+++++++++++++++++++++++++++++++ Media query ends ++++++++++++++++++++++++++++++ */
+
+/****************************** filter and input  section ***************************** */
+.filterInputParentDiv{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.filterDiv{
+  width: 100%;
+}
+.inputDiv{
+  width: 100%;
+}
+.similarInputStyle{
+  width: 50%;
+  padding: 1%;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.493);
+}
+.submit-button {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to top, #3bb890, #114070);
+  color: white !important;
+  border: none;
+  padding: 8px ;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to bottom, #2a9070, #0d3050);
+  opacity: 0.9;
+  color: white !important;
+}
 
 /****************************** Table section ***************************** */
 
