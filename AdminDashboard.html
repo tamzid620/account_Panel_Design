@@ -16,6 +16,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- font CDN  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,13 +30,13 @@
       width: 95%;
       margin: auto;
     }
+    /* number status section  */
     .NSPD {
       margin-top: 20px;
       display: flex;
       justify-content: space-between;
     }
     .box-div {
-      width: 18rem;
       background: linear-gradient(to right, #3bb890, #114070);
       color: white;
       border-radius: 5px;
@@ -49,9 +50,11 @@
     }
     .box-text {
       margin: auto;
-      width: 17rem;
+      width: 16rem;
       padding-top: 20px;
       padding-bottom: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
       display: flex;
       justify-content: space-between;
       font-size: xx-large;
@@ -66,54 +69,134 @@
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
     }
+    /* graph section  */
+    .graphParentdiv {
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
   </style>
   <body class="dashboardBody">
-    <!--<<<<<<<<< number status >>>>>>>>>> -->
-    <div class="NSPD">
-      <!-- card one  -->
-      <div class="box-div">
-        <h5 class="box-title">Income Today</h5>
-        <p class="box-text">
-          <span
-            ><img class="icon" src="./assets/income.png" alt="" srcset=""
-          /></span>
-          <span>$6700</span>
-        </p>
-        <p href="#" class="card-link">view more...</p>
-      </div>
-      <!-- card two  -->
-      <div class="box-div">
-        <h5 class="box-title">Expense Today</h5>
-        <p class="box-text">
-          <span
-            ><img class="icon" src="./assets/expenses.png" alt="" srcset=""
-          /></span>
-          <span>$600</span>
-        </p>
-        <p href="#" class="card-link">view more...</p>
-      </div>
-      <!-- card three  -->
-      <div class="box-div">
-        <h5 class="box-title">Monthly Income</h5>
-        <p class="box-text">
-          <span
-            ><img class="icon" src="./assets/growth.png" alt="" srcset=""
-          /></span>
-          <span>$6700</span>
-        </p>
-        <p href="#" class="card-link">view more...</p>
-      </div>
-      <!-- card four  -->
-      <div class="box-div">
-        <h5 class="box-title">Monthly Expense</h5>
-        <p class="box-text">
-          <span
-            ><img class="icon" src="./assets/expense-month.png" alt="" srcset=""
-          /></span>
-          <span>$6700</span>
-        </p>
-        <p href="#" class="card-link">view more...</p>
-      </div>
+    <!--------------------<<<<<<<<< number status >>>>>>>>>> -------------------->
+    <div class="NSPD container">
+        <div class="row">
+            <!-- card one  -->
+            <div class="col-md-6 col-lg-3 mb-3">
+            <div class="box-div">
+              <h5 class="box-title">Income Today</h5>
+              <p class="box-text">
+                <span
+                  ><img class="icon" src="./assets/income.png" alt="" srcset=""
+                /></span>
+                <span>$6700</span>
+              </p>
+              <p href="#" class="card-link">view more...</p>
+            </div>
+            </div>
+            <!-- card two  -->
+            <div class="col-md-6 col-lg-3 mb-3">
+            <div class="box-div">
+              <h5 class="box-title">Expense Today</h5>
+              <p class="box-text">
+                <span
+                  ><img class="icon" src="./assets/expenses.png" alt="" srcset=""
+                /></span>
+                <span>$600</span>
+              </p>
+              <p href="#" class="card-link">view more...</p>
+            </div>
+            </div>
+            <!-- card three  -->
+            <div class="col-md-6 col-lg-3 mb-3">
+            <div class="box-div">
+              <h5 class="box-title">Monthly Income</h5>
+              <p class="box-text">
+                <span
+                  ><img class="icon" src="./assets/growth.png" alt="" srcset=""
+                /></span>
+                <span>$6700</span>
+              </p>
+              <p href="#" class="card-link">view more...</p>
+            </div>
+            </div>
+            <!-- card four  -->
+            <div class="col-md-6 col-lg-3 mb-3">
+            <div class="box-div">
+              <h5 class="box-title">Monthly Expense</h5>
+              <p class="box-text">
+                <span
+                  ><img
+                    class="icon"
+                    src="./assets/expense-month.png"
+                    alt=""
+                    srcset=""
+                /></span>
+                <span>$6700</span>
+              </p>
+              <p href="#" class="card-link">view more...</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------<<<<<<<<< graph section >>>>>>>>>> -------------------->
+    <div class="graphParentdiv">
+        <canvas id="myChart"></canvas>
+
     </div>
   </body>
+  <!-- chart Js script tag  -->
+  <script>
+    const labels = Array.from({length: 31}, (_, i) => String(i + 1).padStart(2, '0'));
+
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Income",
+          data: [0, 7000, 0, 8000, 0, 9000, 0, 4000, 0, 0, 3000, 0, 0, 10000, 0, 0, 0, 8000, 0, 0, 0, 0, 7000, 0, 0, 4000, 0, 0, 5000, 0, 6000],
+          backgroundColor: "green",
+          borderColor: "green",
+          borderWidth: 1,
+        },
+        {
+          label: "Expense",
+          data: [6000, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 0, 0, 6000, 0, 0, 5000, 0, 3000, 0, 0, 2000, 0, 4000, 0, 0, 0, 3000, 0, 0, 10000, 0],
+          backgroundColor: "red",
+          borderColor: "red",
+          borderWidth: 1,
+        },
+      ],
+    };
+
+    const config = {
+      type: "bar",
+      data: data,
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: "Amount",
+            },
+          },
+          x: {
+            title: {
+              display: true,
+              text: "Day",
+            },
+          },
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Income vs Expense',
+          },
+        },
+      },
+    };
+
+    const myChart = new Chart(document.getElementById("myChart"), config);
+  </script>
+  
 </html>
