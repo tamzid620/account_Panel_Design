@@ -31,10 +31,11 @@
       margin: auto;
     }
     /* number status section  */
-    .NSPD {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
+    .NSD {
+      margin: auto;
+    }
+    .row {
+      margin-top: 40px;
     }
     .box-div {
       background: linear-gradient(to right, #3bb890, #114070);
@@ -74,92 +75,245 @@
       margin-top: 60px;
       margin-bottom: 40px;
     }
+    /* total calculation section  */
+    .TCD {
+      margin: auto;
+    }
+    .box-div1 {
+      background: linear-gradient(to left, #3bb890, #114070);
+      color: white;
+      border-radius: 5px;
+    }
+    .box-title1 {
+      margin: auto;
+      padding: 8px;
+      background: linear-gradient(to right, #3bb890, #114070);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    .box-text1 {
+      margin: auto;
+      width: 23rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-right: 5px;
+      padding-left: 5px;
+      display: flex;
+      justify-content: space-between;
+      font-size: xx-large;
+    }
+    .card-link1 {
+      margin: auto;
+      padding: 8px;
+      background: linear-gradient(to right, #3bb890, #114070);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    /* Matured Bills section  */
+    .MBD {
+      margin: auto;
+      overflow: auto;
+    }
+    .table {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border: 1px solid black;
+    }
+    th {
+      border: 1px solid black;
+      color: white !important;
+      background: linear-gradient(to right, #3bb890, #114070);
+      text-align: center;
+    }
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    .tableButton {
+      background: linear-gradient(to top, #b83b3b, #114070);
+      color: white !important;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: small;
+      font-family: "Montserrat", sans-serif;
+      padding: 2%;
+    }
+    .tableButton:hover {
+      background: linear-gradient(to bottom, #b83b3b, #0d3050);
+      opacity: 0.9;
+      color: white !important;
+    }
   </style>
   <body class="dashboardBody">
-    <!--------------------<<<<<<<<< number status >>>>>>>>>> -------------------->
-    <div class="NSPD container">
-        <div class="row">
-            <!-- card one  -->
-            <div class="col-md-6 col-lg-3 mb-3">
-            <div class="box-div">
-              <h5 class="box-title">Income Today</h5>
-              <p class="box-text">
-                <span
-                  ><img class="icon" src="./assets/income.png" alt="" srcset=""
-                /></span>
-                <span>$6700</span>
-              </p>
-              <p href="#" class="card-link">view more...</p>
-            </div>
-            </div>
-            <!-- card two  -->
-            <div class="col-md-6 col-lg-3 mb-3">
-            <div class="box-div">
-              <h5 class="box-title">Expense Today</h5>
-              <p class="box-text">
-                <span
-                  ><img class="icon" src="./assets/expenses.png" alt="" srcset=""
-                /></span>
-                <span>$600</span>
-              </p>
-              <p href="#" class="card-link">view more...</p>
-            </div>
-            </div>
-            <!-- card three  -->
-            <div class="col-md-6 col-lg-3 mb-3">
-            <div class="box-div">
-              <h5 class="box-title">Monthly Income</h5>
-              <p class="box-text">
-                <span
-                  ><img class="icon" src="./assets/growth.png" alt="" srcset=""
-                /></span>
-                <span>$6700</span>
-              </p>
-              <p href="#" class="card-link">view more...</p>
-            </div>
-            </div>
-            <!-- card four  -->
-            <div class="col-md-6 col-lg-3 mb-3">
-            <div class="box-div">
-              <h5 class="box-title">Monthly Expense</h5>
-              <p class="box-text">
-                <span
-                  ><img
-                    class="icon"
-                    src="./assets/expense-month.png"
-                    alt=""
-                    srcset=""
-                /></span>
-                <span>$6700</span>
-              </p>
-              <p href="#" class="card-link">view more...</p>
-            </div>
-            </div>
+    <!--------------------<<<<<<<<< Number status section >>>>>>>>>> -------------------->
+    <div class="NSD">
+      <div class="row">
+        <!-- card one  -->
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="box-div">
+            <h5 class="box-title">Income Today</h5>
+            <p class="box-text">
+              <span
+                ><img class="icon" src="./assets/income.png" alt="" srcset=""
+              /></span>
+              <span>$6700</span>
+            </p>
+            <p href="#" class="card-link">view more...</p>
+          </div>
         </div>
+        <!-- card two  -->
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="box-div">
+            <h5 class="box-title">Expense Today</h5>
+            <p class="box-text">
+              <span
+                ><img class="icon" src="./assets/expenses.png" alt="" srcset=""
+              /></span>
+              <span>$600</span>
+            </p>
+            <p href="#" class="card-link">view more...</p>
+          </div>
+        </div>
+        <!-- card three  -->
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="box-div">
+            <h5 class="box-title">Monthly Income</h5>
+            <p class="box-text">
+              <span
+                ><img class="icon" src="./assets/growth.png" alt="" srcset=""
+              /></span>
+              <span>$6700</span>
+            </p>
+            <p href="#" class="card-link">view more...</p>
+          </div>
+        </div>
+        <!-- card four  -->
+        <div class="col-md-6 col-lg-3 mb-3">
+          <div class="box-div">
+            <h5 class="box-title">Monthly Expense</h5>
+            <p class="box-text">
+              <span
+                ><img
+                  class="icon"
+                  src="./assets/expense-month.png"
+                  alt=""
+                  srcset=""
+              /></span>
+              <span>$6700</span>
+            </p>
+            <p href="#" class="card-link">view more...</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!--------------------<<<<<<<<< graph section >>>>>>>>>> -------------------->
+    <!--------------------<<<<<<<<< Graph section >>>>>>>>>> -------------------->
     <div class="graphParentdiv">
-        <canvas id="myChart"></canvas>
-
+      <canvas id="myChart"></canvas>
+    </div>
+    <!--------------------<<<<<<<<< Total Calculation section >>>>>>>>>> -------------------->
+    <div class="TCD">
+      <div class="row">
+        <!-- card one  -->
+        <div class="col-md-6 col-lg-4 mb-3">
+          <div class="box-div1">
+            <h5 class="box-title1">Total Income</h5>
+            <p class="box-text">
+              <span>$6700</span>
+              <span
+                ><img
+                  class="icon"
+                  src="./assets/money-bag.png"
+                  alt=""
+                  srcset=""
+              /></span>
+            </p>
+            <p href="#" class="card-link1">view more...</p>
+          </div>
+        </div>
+        <!-- card two  -->
+        <div class="col-md-6 col-lg-4 mb-3">
+          <div class="box-div1">
+            <h5 class="box-title1">Total Expense</h5>
+            <p class="box-text">
+              <span>$600</span>
+              <span
+                ><img
+                  class="icon"
+                  src="./assets/total-expenses.png"
+                  alt=""
+                  srcset=""
+              /></span>
+            </p>
+            <p href="#" class="card-link1">view more...</p>
+          </div>
+        </div>
+        <!-- card three  -->
+        <div class="col-md-6 col-lg-4 mb-3">
+          <div class="box-div1">
+            <h5 class="box-title1">Total Dues</h5>
+            <p class="box-text">
+              <span>$6700</span>
+              <span
+                ><img class="icon" src="./assets/dues.png" alt="" srcset=""
+              /></span>
+            </p>
+            <p href="#" class="card-link1">view more...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------<<<<<<<<< Matured Bills section >>>>>>>>>> -------------------->
+    <div class="MBD">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">LPO</th>
+            <th scope="col">Invoice Date</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Payment Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Akkas Ali</td>
+            <td>7563-87338-37423</td>
+            <td>2024-07-11</td>
+            <td>2024-07-02</td>
+            <td><button class="tableButton">Approved</button></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
   <!-- chart Js script tag  -->
   <script>
-    const labels = Array.from({length: 31}, (_, i) => String(i + 1).padStart(2, '0'));
+    const labels = Array.from({ length: 31 }, (_, i) =>
+      String(i + 1).padStart(2, "0")
+    );
 
     const data = {
       labels: labels,
       datasets: [
         {
           label: "Income",
-          data: [0, 7000, 0, 8000, 0, 9000, 0, 4000, 0, 0, 3000, 0, 0, 10000, 0, 0, 0, 8000, 0, 0, 0, 0, 7000, 0, 0, 4000, 0, 0, 5000, 0, 6000],
+          data: [
+            0, 7000, 0, 8000, 0, 9000, 0, 4000, 0, 0, 3000, 0, 0, 10000, 0, 0,
+            0, 8000, 0, 0, 0, 0, 7000, 0, 0, 4000, 0, 0, 5000, 0, 6000,
+          ],
           backgroundColor: "green",
           borderColor: "green",
           borderWidth: 1,
         },
         {
           label: "Expense",
-          data: [6000, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 0, 0, 6000, 0, 0, 5000, 0, 3000, 0, 0, 2000, 0, 4000, 0, 0, 0, 3000, 0, 0, 10000, 0],
+          data: [
+            6000, 0, 0, 0, 1000, 0, 0, 0, 0, 0, 0, 0, 6000, 0, 0, 5000, 0, 3000,
+            0, 0, 2000, 0, 4000, 0, 0, 0, 3000, 0, 0, 10000, 0,
+          ],
           backgroundColor: "red",
           borderColor: "red",
           borderWidth: 1,
@@ -190,7 +344,7 @@
         plugins: {
           title: {
             display: true,
-            text: 'Income vs Expense',
+            text: "Income vs Expense",
           },
         },
       },
@@ -198,5 +352,4 @@
 
     const myChart = new Chart(document.getElementById("myChart"), config);
   </script>
-  
 </html>
