@@ -6,16 +6,24 @@
     <title>BalanceSheet</title>
 </head>
 <style>
-    .invoice-box {
-     width: 21cm; 
-     height: 29.7cm;
-     margin: 30mm 45mm; 
-     font-family: "Open Sans", sans-serif;
-     background-color: #ffffff;
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-     overflow: hidden; 
-     position: relative;
- }
+.htmlBody {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invoice-box {
+  width: 21cm; 
+  height: 29.7cm;
+  margin: 0; /* Remove fixed margins */
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden; 
+  position: relative; 
+}
      .headerImg {
        width: 150px;
      }
@@ -103,254 +111,256 @@
         padding: 0 20px;
         box-sizing: border-box;
      }
-   </style>
+</style>
    <body>
-         <div class="invoice-box">
-           <!-- header img section  -->
-           <img class="headerImg" src="./assets/Qalaat Al Khaleej.png" alt="" />
-           
-           <div class="mx-div">
-               
-                     <!-- information section  -->
-                     <div class="informationDiv">
-                       <div class="information1">
-                           <p>
-                               <span class="boldSpan">Account Number: </span>
-                               <span>110121</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Account Title: </span>
-                               <span>Abcde</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Account Type: </span>
-                               <span>Mr. Jamie McMaster</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Currency: </span>
-                               <span>Boys Changing Room</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Date of Opening:</span>
-                               <span>10059856233685452</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">CUstomer Code: </span>
-                               <span>Sila</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Adress: </span>
-                               <span>24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square, U.A.E</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Tran. Description: </span>
-                               <span>Not Available</span>
-                           </p>
-                       </div>
-                       <!-- <div class="information2">
-                           <p>
-                               <span class="boldSpan">Terms of payment: </span>
-                               <span>CDC</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Email: </span>
-                               <span>info@qalatalkhaleej.com</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Ref:</span>
-                               <span>PO-111238</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">TRN:</span>
-                               <span>10059856233685452</span>
-                           </p>
-                           <p>
-                               <span class="boldSpan">Scope of Works: </span>
-                               <span>carry out carpentry works and replace all 50 locks on lockers in girls changing rooms</span>
-                           </p>
-                       </div> -->
-                     </div>
-     
-             <!-- Table section -->
-             <table class="invoice-table">
-               <th class="heading">
-                 <th>Sl No</th>
-                 <th>Date</th>
-                 <th>Treans Code /Chq No</th>
-                 <th>Particulars</th>
-                 <th>Debit Amount</th>
-                 <th>Creadit Amount</th>
-                 <th>Balanced Amount</th>
-               </th>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-               <tr>
-                 <td>1.</td>
-                 <td>Replacement </td>
-                 <td>01</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-                 <td>5,000.00</td>
-               </tr>
-             </table>
-             <div class="extraParagraph">
-                 <p>
-                    Thanks for banking with us
-                <br>
-                    Plase notify your branch for any discrepcies or irregularities, with 15 days from the date of the statement is correct .This  computer generated statement required no signature.
-                 </p>
-             </div>
-           </div>
-         </div>
+    <div class="htmlBody">
+      <div class="invoice-box">
+        <!-- header img section  -->
+        
+        <div class="mx-div">
+          <img class="headerImg" src="./assets/Qalaat Al Khaleej.png" alt="" />
+            
+                  <!-- information section  -->
+                  <div class="informationDiv">
+                    <div class="information1">
+                        <p>
+                            <span class="boldSpan">Account Number: </span>
+                            <span>110121</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Account Title: </span>
+                            <span>Abcde</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Account Type: </span>
+                            <span>Mr. Jamie McMaster</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Currency: </span>
+                            <span>Boys Changing Room</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Date of Opening:</span>
+                            <span>10059856233685452</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">CUstomer Code: </span>
+                            <span>Sila</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Adress: </span>
+                            <span>24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square, U.A.E</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Tran. Description: </span>
+                            <span>Not Available</span>
+                        </p>
+                    </div>
+                    <!-- <div class="information2">
+                        <p>
+                            <span class="boldSpan">Terms of payment: </span>
+                            <span>CDC</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Email: </span>
+                            <span>info@qalatalkhaleej.com</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Ref:</span>
+                            <span>PO-111238</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">TRN:</span>
+                            <span>10059856233685452</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Scope of Works: </span>
+                            <span>carry out carpentry works and replace all 50 locks on lockers in girls changing rooms</span>
+                        </p>
+                    </div> -->
+                  </div>
+  
+          <!-- Table section -->
+          <table class="invoice-table">
+            <th class="heading">
+              <th>Sl No</th>
+              <th>Date</th>
+              <th>Treans Code /Chq No</th>
+              <th>Particulars</th>
+              <th>Debit Amount</th>
+              <th>Creadit Amount</th>
+              <th>Balanced Amount</th>
+            </th>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+          </table>
+          <div class="extraParagraph">
+              <p>
+                 Thanks for banking with us
+             <br>
+                 Plase notify your branch for any discrepcies or irregularities, with 15 days from the date of the statement is correct .This  computer generated statement required no signature.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
    </body>
 </html>
