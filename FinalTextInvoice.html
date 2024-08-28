@@ -13,24 +13,24 @@
     />
   </head>
   <style>
-.htmlBody {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .htmlBody {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.invoice-box {
-  width: 21cm; 
-  height: 29.7cm;
-  margin: 0; /* Remove fixed margins */
-  font-family: "Open Sans", sans-serif;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  overflow: hidden; 
-  position: relative; 
-}
+    .invoice-box {
+      width: 21cm;
+      height: 29.7cm;
+      margin: 0; /* Remove fixed margins */
+      font-family: "Open Sans", sans-serif;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      position: relative;
+    }
 
     .headerImg {
       width: 100%;
@@ -40,8 +40,8 @@
       width: 100%;
       height: 120px;
       position: absolute; /* Changed to absolute */
-  bottom: 0; /* Positioned at the bottom */
-  left: 0; /* Aligns with the left edge */
+      bottom: 0; /* Positioned at the bottom */
+      left: 0; /* Aligns with the left edge */
     }
 
     .invoice-header {
@@ -119,32 +119,36 @@
       margin: 5px 0;
     }
 
-    .invoice-summary p.total {
-      font-weight: bold;
-      color: #004c6d;
+    .right-align {
+      text-align: right !important;
+      font-weight: bold !important;
+      color: black;
     }
-
+    .details-total {
+      text-align: center !important;
+      font-weight: bold;
+    }
     .invoice-footer {
       text-align: center;
       color: #777;
       margin-top: 30px;
     }
-    .informationDiv{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        font-size: 14px;
+    .informationDiv {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 14px;
     }
-    .information1{
-        width: 50%;
+    .information1 {
+      width: 50%;
     }
-    .information2{
-        width: 50%;
+    .information2 {
+      width: 50%;
     }
-    .boldSpan{
-        font-weight: bold;
-        margin-right: 5px;
+    .boldSpan {
+      font-weight: bold;
+      margin-right: 5px;
     }
   </style>
   <body>
@@ -152,7 +156,7 @@
       <div class="invoice-box">
         <!-- header img section  -->
         <img class="headerImg" src="./assets/Invoice-Qalat-Header.png" alt="" />
-  
+
         <!-- invoiceNo  & Date section  -->
         <div class="parentBoldInvoiceData">
           <div class="boldInvoiceData1">
@@ -166,59 +170,64 @@
         </div>
         <!-- Table section -->
         <div class="mx-div">
-            
-                  <!-- information section  -->
-                  <div class="informationDiv">
-                    <div class="information1">
-                        <p>
-                            <span class="boldSpan">To: </span>
-                            <span>M/S TAALEEM SPV LIMITED</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Tel: </span>
-                            <span>	+971 4 349 8807</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Atm: </span>
-                            <span>Mr. Jamie McMaster</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Project: </span>
-                            <span>Boys Changing Room</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">TRN:</span>
-                            <span>10059856233685452</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Address: </span>
-                            <span>24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square, U.A.E</span>
-                        </p>
-                    </div>
-                    <div class="information2">
-                        <p>
-                            <span class="boldSpan">Terms of payment: </span>
-                            <span>CDC</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Email: </span>
-                            <span>info@qalatalkhaleej.com</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Ref:</span>
-                            <span>PO-111238</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">TRN:</span>
-                            <span>10059856233685452</span>
-                        </p>
-                        <p>
-                            <span class="boldSpan">Scope of Works: </span>
-                            <span>carry out carpentry works and replace all 50 locks on lockers in girls changing rooms</span>
-                        </p>
-                    </div>
-                  </div>
-  
+          <!-- information section  -->
+          <div class="informationDiv">
+            <div class="information1">
+              <p>
+                <span class="boldSpan">To: </span>
+                <span>M/S TAALEEM SPV LIMITED</span>
+              </p>
+              <p>
+                <span class="boldSpan">Tel: </span>
+                <span> +971 4 349 8807</span>
+              </p>
+              <p>
+                <span class="boldSpan">Atm: </span>
+                <span>Mr. Jamie McMaster</span>
+              </p>
+              <p>
+                <span class="boldSpan">Project: </span>
+                <span>Boys Changing Room</span>
+              </p>
+              <p>
+                <span class="boldSpan">TRN:</span>
+                <span>10059856233685452</span>
+              </p>
+              <p>
+                <span class="boldSpan">Address: </span>
+                <span
+                  >24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square,
+                  U.A.E</span
+                >
+              </p>
+            </div>
+            <div class="information2">
+              <p>
+                <span class="boldSpan">Terms of payment: </span>
+                <span>CDC</span>
+              </p>
+              <p>
+                <span class="boldSpan">Email: </span>
+                <span>info@qalatalkhaleej.com</span>
+              </p>
+              <p>
+                <span class="boldSpan">Ref:</span>
+                <span>PO-111238</span>
+              </p>
+              <p>
+                <span class="boldSpan">TRN:</span>
+                <span>10059856233685452</span>
+              </p>
+              <p>
+                <span class="boldSpan">Scope of Works: </span>
+                <span
+                  >carry out carpentry works and replace all 50 locks on lockers
+                  in girls changing rooms</span
+                >
+              </p>
+            </div>
+          </div>
+
           <!-- table no 2  -->
           <table class="invoice-table">
             <tr class="heading">
@@ -250,14 +259,14 @@
               <td colspan="5" class="right-align">Total Net Amount:</td>
               <td>5,250.00</td>
             </tr>
-            <tr class="details text-center fw-bold">
-              <td colspan="6">
+            <tr class="details">
+              <td class="details-total" colspan="6">
                 In Words: AED – Five Thousand Two Hundred Fifty Only.
               </td>
             </tr>
           </table>
         </div>
-  
+
         <!-- footer img section  -->
         <img class="footerImg" src="./assets/Invoice-Qalat-FOoter.png" alt="" />
       </div>

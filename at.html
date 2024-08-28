@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Sheet</title>
+    <style>
+      .htmlBody {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(to left, #0e859d, #04505f);
+      }
+
+      .invoice-box {
+        position: relative;
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        position: relative;
+        padding: 20px;
+      }
+      .title-section {
+        display: flex;
+        justify-content: space-between;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 10px; /* ----------------- */
+        font-size: 25px; /* ----------------- */
+        border-bottom: 2px solid #0e859d;
+        padding-bottom: 10px;
+      }
+
+      h2 {
+        color: #555;
+        font-size: 20px; /* ----------------- */
+        margin-bottom: 15px; /* ----------------- */
+        font-weight: normal;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td {
+        padding: 5px;
+        text-align: left;
+        font-size: 14px; /* ----------------- */
+      }
+
+      th {
+        background-color: #0e859d;
+        color: white;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #e0e0e0;
+      }
+      .table-container {
+        overflow-x: auto;
+      }
+      .signature-section{
+        position: absolute;
+        text-align: center;
+        bottom: 20px; 
+        right: 20px;  
+      }
+      hr{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="htmlBody">
+      <div class="invoice-box">
+        <h1>Attendance Sheet for July</h1>
+        <div class="title-section">
+          <span>
+            <h2>Name:</h2>
+            <h2>Id:</h2>
+          </span>
+          <span>
+            <h2>Issue Date: </h2>
+          </span>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Login Time</th>
+                <th>Login Delay</th>
+                <th>Logout Time</th>
+                <th>Logout Delay</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>01-07-2024</td>
+                <td>Monday</td>
+                <td>08:00 AM</td>
+                <td>00:05</td>
+                <td>05:00 PM</td>
+                <td>00:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="signature-section">
+          <span>
+            <hr>
+            <p>Authority Signature</p>
+          </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
