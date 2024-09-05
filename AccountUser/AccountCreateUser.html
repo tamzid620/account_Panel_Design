@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User</title>
+    <!-- bootstrap CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .adminBody {
+      height: 100vh;
+      width: 100%;
+      background: rgb(220, 219, 219);
+      display: flex;
+      flex-direction: column;
+    }
+    .section {
+      background-color: white;
+      margin: 50px 20px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .tag-section {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      gap: 10px;
+    }
+    .res-form {
+      /* *********** change the style *********   */
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      /* *********** change the style *********   */
+      .res-form {
+        flex: 1 1 100%;
+      }
+    }
+    h5 {
+      margin-bottom: 20px;
+    }
+    .parent-form-group{
+    }
+    .formInput {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-check {
+      margin-bottom: 15px;
+    }
+    .form-check-input {
+      cursor: pointer;
+    }
+    .form-check-label {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .button-div {
+      display: flex;
+      justify-content: center;
+    }
+    .submitButton {
+      margin-top: 23px;
+      width: 90px;
+      font-family: "Montserrat", sans-serif;
+      background: linear-gradient(to top, #3bb890, #114070);
+      color: white !important;
+      border: none;
+      padding: 5px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      transition: background 0.3s ease;
+    }
+    .submitButton:hover {
+      background: linear-gradient(to bottom, #3bb890, #114070);
+      opacity: 0.9;
+      color: white !important;
+    }
+  </style>
+  <body>
+    <div class="adminBody">
+      <!-- Tag and button section  -->
+      <section class="section">
+        <h1>Create User</h1>
+        <div class="tag-section container">
+          <form>
+            <div class="parent-form-group row g-3">
+                <span class="form-group col col-lg-4 col-md-6 col-sm-12">
+                  <label for="name">Name:</label>
+                  <input
+                    type="text"
+                    class="formInput"
+                    id="name"
+                    placeholder="Enter Name"
+                    required
+                  />
+                </span>
+                <span class="form-group col col-lg-4 col-md-6 col-sm-12">
+                  <label for="email">Email:</label>
+                  <input
+                    type="text"
+                    class="formInput"
+                    id="email"
+                    placeholder="Enter Email"
+                    required
+                  />
+                </span>
+                <span class="form-group col col-lg-4 col-md-6 col-sm-12">
+                  <label for="password">Password:</label>
+                  <input
+                    type="text"
+                    class="formInput"
+                    id="password"
+                    placeholder="Enter Password"
+                    required
+                  />
+                </span>
+            </div>
+            <div class="res-form row">
+              <!-- *********** change the line*********   -->
+              <h5>Select Role:</h5>
+              <div class="form-check col col-lg-3">
+                <!-- *********** change the line*********   -->
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="javaCheckbox"
+                />
+                <label class="form-check-label" for="javaCheckbox"> ABC </label>
+              </div>
+            </div>
+            <span class="button-div">
+              <button class="submitButton">Submit</button>
+            </span>
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
