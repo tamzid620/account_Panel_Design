@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<style>
+textarea {
+  width: 100%;
+  height: 150px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.InvoiceTableContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow-x: auto !important;
+}
+
+.InvoiceTable-container {
+    overflow-x: auto !important;
+    flex: 1;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.InvoiceTable-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.InvoiceTable-container th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.InvoiceTable-container  th {
+    background: linear-gradient(to left, #37d8a5, #114070);
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .table-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+    .tableDiv{
+    margin: auto;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    margin-left: 10px;
+    margin-left: 10px;
+}
+.invoiceTable{
+    width: 100%;
+    overflow-x: auto !important;
+    border: 1px solid black;
+    text-align: center;
+}
+.invoiceTable  th{
+    border: 1px solid black;
+    padding: 1%;
+}
+.invoiceTable tr td  {
+    border: 1px solid black;
+}
+.invoiceTable .thead{
+    background: linear-gradient(to left, #37d8a5, #114070);
+    color: white;
+}
+</style>
+<body>
+    <textarea id="myTextArea" placeholder="write something"></textarea>
+
+    <div class="tableDiv">
+        <table class="invoiceTable">
+            <thead class="thead">
+              <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Project Location</th>
+                <th>ATTD</th>
+                <th>STD Hrs</th>
+                <th>PH</th>
+                <th>WE</th>
+                <th>OT</th>
+                <th>INC</th>
+                <th>BASE</th>
+                <th>Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>01-Mar-23</th>
+                <td>WED</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>01-Mar-23</th>
+                <td>WED</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>01-Mar-23</th>
+                <td>WED</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          
+    </div>
+
+    <div class="InvoiceTableContainer">
+        <div class="InvoiceTable-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01-Mar-23</td>
+                        <td>WED</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <td>01-Mar-23</td>
+                        <td>WED</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <td>01-Mar-23</td>
+                        <td>WED</td>
+                        <td>Otto</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="InvoiceTable-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Day</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01-Mar-23</td>
+                        <td>WED</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <td>01-Mar-23</td>
+                        <td>WED</td>
+                        <td>Otto</td>
+                    </tr>
+                    <tr>
+                        <td>01-Mar-23</td>
+                        <td>WED</td>
+                        <td>Otto</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        const textarea = document.getElementById('myTextArea');
+        
+        textarea.addEventListener('keydown', function(event) {
+          if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            const value = this.value;
+            const lines = value.split('\n');
+            const currentLineIndex = getCurrentLineIndex(this);
+            const currentLine = lines[currentLineIndex];
+        
+            if (isBulletPoint(currentLine)) {
+              // Remove bullet point if current line starts with '- '
+              lines[currentLineIndex] = currentLine.slice(2); // Remove '- '
+            } else {
+              // Insert bullet point if current line doesn't start with '- '
+              lines.splice(currentLineIndex, 0, '• ');
+            }
+        
+            this.value = lines.join('\n');
+            this.selectionStart = this.selectionEnd = getNewCursorPosition(currentLineIndex, currentLine, isBulletPoint(currentLine));
+          }
+        });
+        
+        function getCurrentLineIndex(textarea) {
+          return textarea.value.substr(0, textarea.selectionStart).split('\n').length - 1;
+        }
+        
+        function isBulletPoint(line) {
+          return /^ /.test(line.trim());
+        }
+        
+        function getNewCursorPosition(currentLineIndex, currentLine, isBullet) {
+          if (isBullet) {
+            // If there was a bullet point, move cursor to beginning of the line
+            return currentLineIndex * 2; // Assuming '- ' is 2 characters long
+          } else {
+            // If there was no bullet point, move cursor to after the inserted bullet point
+            return (currentLineIndex + 1) * 2; // Assuming '- ' is 2 characters long
+          }
+        }
+        </script>
+
+</body>
+</html>

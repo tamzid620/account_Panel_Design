@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinalTextInvoice</title>
+    <!-- font Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .htmlBody {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .invoice-box {
+      width: 21cm;
+      height: 29.7cm;
+      margin: 0; 
+      font-family: "Open Sans", sans-serif;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .headerImg {
+      width: 100%;
+      height: 150px;
+    }
+    .footerImg {
+      width: 100%;
+      height: 120px;
+      position: absolute; /* Changed to absolute */
+      bottom: 0; /* Positioned at the bottom */
+      left: 0; /* Aligns with the left edge */
+    }
+
+    .invoice-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .invoice-header h1 {
+      font-size: 24px;
+      margin: 10px 0;
+      color: #004c6d;
+    }
+    .parentBoldInvoiceData {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .boldInvoiceData1 {
+      visibility: hidden;
+      background-color: rgba(127, 217, 255, 0.495);
+      display: flex;
+      gap: 40px;
+      font-weight: 700;
+      padding-left: 40px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+    .boldInvoiceData2 {
+      width: 400px;
+      height: 45px;
+      background-color: rgba(127, 217, 255, 0.495);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      padding-left: 20px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+    .mx-div {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .invoice-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .invoice-table th {
+      background-color: #004c6d;
+      color: white;
+      font-weight: bold;
+    }
+
+    .invoice-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .invoice-summary {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .invoice-summary p {
+      margin: 5px 0;
+    }
+
+    .right-align {
+      text-align: right !important;
+      font-weight: bold !important;
+      color: black;
+    }
+    .details-total {
+      text-align: center !important;
+      font-weight: bold;
+    }
+    .invoice-footer {
+      text-align: center;
+      color: #777;
+      margin-top: 30px;
+    }
+    .informationDiv {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 14px;
+    }
+    .information1 {
+      width: 50%;
+    }
+    .information2 {
+      width: 50%;
+    }
+    .boldSpan {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  </style>
+  <body>
+    <div class="htmlBody">
+      <div class="invoice-box">
+        <!-- header img section  -->
+        <img class="headerImg" src="./assets/Invoice-Qalat-Header.png" alt="" />
+
+        <!-- invoiceNo  & Date section  -->
+        <div class="parentBoldInvoiceData">
+          <div class="boldInvoiceData1">
+            <p><span>Invoice No: </span><span>akz-0042223</span></p>
+            <p><span>Date: </span><span>2024-07-15</span></p>
+          </div>
+          <div class="boldInvoiceData2">
+            <p><span>Invoice No: </span><span>akz-0042223</span></p>
+            <p><span>Date: </span><span>2024-07-15</span></p>
+          </div>
+        </div>
+        <!-- Table section -->
+        <div class="mx-div">
+          <!-- information section  -->
+          <div class="informationDiv">
+            <div class="information1">
+              <p>
+                <span class="boldSpan">To: </span>
+                <span>M/S TAALEEM SPV LIMITED</span>
+              </p>
+              <p>
+                <span class="boldSpan">Tel: </span>
+                <span> +971 4 349 8807</span>
+              </p>
+              <p>
+                <span class="boldSpan">Atm: </span>
+                <span>Mr. Jamie McMaster</span>
+              </p>
+              <p>
+                <span class="boldSpan">Project: </span>
+                <span>Boys Changing Room</span>
+              </p>
+              <p>
+                <span class="boldSpan">TRN:</span>
+                <span>10059856233685452</span>
+              </p>
+              <p>
+                <span class="boldSpan">Address: </span>
+                <span
+                  >24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square,
+                  U.A.E</span
+                >
+              </p>
+            </div>
+            <div class="information2">
+              <p>
+                <span class="boldSpan">Terms of payment: </span>
+                <span>CDC</span>
+              </p>
+              <p>
+                <span class="boldSpan">Email: </span>
+                <span>info@qalatalkhaleej.com</span>
+              </p>
+              <p>
+                <span class="boldSpan">Ref:</span>
+                <span>PO-111238</span>
+              </p>
+              <p>
+                <span class="boldSpan">TRN:</span>
+                <span>10059856233685452</span>
+              </p>
+              <p>
+                <span class="boldSpan">Scope of Works: </span>
+                <span
+                  >carry out carpentry works and replace all 50 locks on lockers
+                  in girls changing rooms</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- table no 2  -->
+          <table class="invoice-table">
+            <tr class="heading">
+              <th>SR.</th>
+              <th colspan="2">Description</th>
+              <th>Qty.</th>
+              <th>Unit price</th>
+              <th>Amount</th>
+            </tr>
+            <tr class="item">
+              <td>1.</td>
+              <td colspan="2">
+                Replacement and Alignment checking work with minor maintenance -
+                Hinges, knob, lock and towel rod.
+              </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr class="total">
+              <td colspan="5" class="right-align">Subtotal:</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr class="total">
+              <td colspan="5" class="right-align">+ 5% VAT Amount:</td>
+              <td>250.00</td>
+            </tr>
+            <tr class="total">
+              <td colspan="5" class="right-align">Total Net Amount:</td>
+              <td>5,250.00</td>
+            </tr>
+            <tr class="details">
+              <td class="details-total" colspan="6">
+                In Words: AED – Five Thousand Two Hundred Fifty Only.
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- footer img section  -->
+        <img class="footerImg" src="./assets/Invoice-Qalat-FOoter.png" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

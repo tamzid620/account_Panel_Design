@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdminPanel</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <!-- bootstrap CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- font CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="adminBody">
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light NAV position-fixed w-100">
+        <div class="container-fluid">
+          <!--+++++++++++++++++++++++++++++ button and admin text +++++++++++++++++++++++++-->
+            <!-- Menu button for large devices -->
+               <button
+                 class="btn menu-button d-none d-lg-block text-white"
+                 id="sidebarToggle"
+                 aria-controls="sidebar"
+                 aria-expanded="false"
+                 aria-label="Toggle sidebar"
+               >
+                 <img
+                   class="menu-button-img"
+                   style="height: 20px"
+                   src="./assets/menu.png"
+                   alt=""
+                   srcset=""
+                 />
+               </button>
+                 <a class="navbar-brand text-white adminPanelText" href="#">AdminPanel</a>
+           <!--+++++++++++++++++++++++++++++ button and admin text +++++++++++++++++++++++++-->
+            <!-- menu button  for medium and small device-->
+               <button
+                 class="navbar-toggler"
+                 type="button"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#navbarSupportedContent"
+                 aria-controls="navbarSupportedContent"
+                 aria-expanded="false"
+                 aria-label="Toggle navigation"
+                 id="menuButton"
+               >
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav">
+                   <li class="nav-item">
+                     <a class="nav-link" href="#">
+                       <img
+                         src="https://i.pinimg.com/564x/6a/44/f0/6a44f0e35b10e6ed063eeebf7ed844f9.jpg"
+                         alt="Profile"
+                         class="rounded-circle"
+                         width="30"
+                         height="30"
+                       />
+                     </a>
+                   </li>
+                   <li class="nav-item">
+                     <button class="btn logout-btn mt-1" href="#">Logout</button>
+                   </li>
+                 </ul>
+               </div>
+          </div>
+
+        </div>
+      </nav>
+      <!-- Sidebar -->
+      <div class="d-flex">
+        <div class="sidebar-hidden sidebar-expanded" id="sidebar" >
+          <div class="list-group list-group-flush">
+             <!-- Accounts dropdown -->
+      <div class="dropdown">
+        <button
+          class="list-group-item list-group-item-action dropdown-toggle"
+          type="button"
+          id="accountsDropdown"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Accounts
+        </button>
+        <ul class="dropdown-menu " aria-labelledby="accountsDropdown">
+          <li><a class="dropdown-item fst-italic" href="#">Account master</a></li>
+          <li><a class="dropdown-item fst-italic" href="#">Purchase Order</a></li>
+          <li><a class="dropdown-item fst-italic" href="#">Text Invoice</a></li>
+          <li><a class="dropdown-item fst-italic" href="#">PaySlip</a></li>
+        </ul>
+      </div>
+            <a href="#" class="list-group-item list-group-item-action">Attendance</a>
+            <a href="#" class="list-group-item list-group-item-action">Role</a>
+            <a href="#" class="list-group-item list-group-item-action">Settings</a>
+            <a href="#" class="list-group-item list-group-item-action">Notification</a>
+            <a href="#" class="list-group-item list-group-item-action">SMS</a>
+            <a href="#" class="list-group-item list-group-item-action">Quotation</a>
+          </div>
+          <div class="text-center">
+              <button class="btn small-logout-btn mt-1 d-lg-none" href="#">Logout</button>
+          </ul>
+        </div>
+        </div>
+        <!--***************************** Main ****************************************** -->
+        <div class="flex-grow-1 main-content-expanded p-3">
+          <div>
+ <!-- ((((((((((((((((((((((((((((((((( filterInputParentDiv ))))))))))))))))))))))))))))))))) -->
+ <div class="filterInputParentDiv bg-light p-3 rounded mb-5 mt-3">
+  <!-- filter dropdown section -->
+  <div class="filterDiv">
+    <h1 class="filterText mb-3">
+      <span>
+        <img class="filterImg" src="./assets/filter_icon.png" alt="" />
+      </span>
+      <span>Filters</span>
+    </h1>
+    <div class="w-50">
+      <select id="filterSelect" class="form-select" aria-label="Default select example">
+        <option value="1" selected>Date</option>
+        <option value="2">Month</option>
+        <option value="3">Invoice</option>
+        <option value="4">Client Name</option>
+        <option value="5">LPO</option>
+      </select>
+    </div>
+  </div>
+  
+  <!-- dynamic input fields -->
+  <div class="inputDiv">
+    <!-- <<<<<<<<<< date input field >>>>>>>>>> -->
+    <div id="dateField">
+      <h1 class="filterText">
+        <span>Date</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="date" name="date" id="dateInput">
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< month dropdown input field >>>>>>>>>> -->
+    <div id="monthField" style="display: none;">
+      <h1 class="filterText">
+        <span>Month</span>
+      </h1>
+      <div class="w-50">
+        <select class="form-select" aria-label="Default select example" id="monthSelect">
+          <option value="1" selected>January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< invoice input field >>>>>>>>>> -->
+    <div id="invoiceField" style="display: none;">
+      <h1 class="filterText">
+        <span>Invoice</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="text" name="invoice" id="invoiceInput">
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< client Name input field >>>>>>>>>> -->
+    <div id="clientNameField" style="display: none;">
+      <h1 class="filterText">
+        <span>Client Name</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="text" name="clientName" id="clientNameInput">
+      </div>
+    </div>
+    
+    <!-- <<<<<<<<<< LPO input field >>>>>>>>>> -->
+    <div id="lpoField" style="display: none;">
+      <h1 class="filterText">
+        <span>LPO</span>
+      </h1>
+      <div>
+        <input class="similarInputStyle" type="text" name="lpo" id="lpoInput">
+      </div>
+    </div>
+  </div>
+  <!-- submit button -->
+  <div class="ms-3">
+    <button type="submit" class="submit-button">Submit</button>
+  </div>
+</div>
+<!-- ((((((((((((((((((((((((((((((((( filterInputParentDiv ))))))))))))))))))))))))))))))))) -->
+          </div>
+
+          <div class=" bg-light p-3 rounded mb-5">
+            <!-- button and filter section  -->
+            <div class="mb-5 d-flex justify-content-between align-items-center gap-2">
+              <!-- selector section  -->
+              <div class="selector-width d-flex align-items-center gap-2">
+                <span> Show </span>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>10</option>
+                  <option value="1">20</option>
+                  <option value="2">30</option>
+                  <option value="3">40</option>
+                </select>
+                <span> Entries </span>
+              </div>
+              <!-- button section  -->
+              <div class="d-flex align-items-center gap-2">
+                <!-- Export to CSV button -->
+                <button class="button-width d-flex align-items-center gap-1">
+                  <span
+                    ><img
+                      class="button-img"
+                      src="./assets/document_16509258.png"
+                      alt=""
+                  /></span>
+                  <span>CSV</span>
+                </button>
+                <!-- Export to Excel button -->
+                <button class="button-width d-flex align-items-center gap-1">
+                  <span
+                    ><img
+                      class="button-img"
+                      src="./assets/document_16509258.png"
+                      alt=""
+                  /></span>
+                  <span> Excel</span>
+                </button>
+                <!-- Print button -->
+                <button class="button-width d-flex align-items-center gap-1">
+                  <span
+                    ><img
+                      class="button-img"
+                      src="./assets/printer_1041985.png"
+                      alt=""
+                  /></span>
+                  <span>Print</span>
+                </button>
+                <!-- Column visibility  -->
+                <button class="button-width d-flex align-items-center gap-1">
+                  <span
+                    ><img
+                      class="button-img"
+                      src="./assets/file-storage_8316770.png"
+                      alt=""
+                  /></span>
+                  <span>visibility</span>
+                </button>
+                <!-- Export to PDF button  -->
+                <button class="button-width d-flex align-items-center gap-1">
+                  <span
+                    ><img class="button-img" src="./assets/pdf.png" alt=""
+                  /></span>
+                  <span>PDF</span>
+                </button>
+              </div>
+              <!-- search button  -->
+              <div>
+                <form class="d-flex ms-auto me-3">
+                  <input
+                    class="form-control me-2 w-100"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <button class="btn search-button" type="submit">
+                    Search
+                  </button>
+                </form>
+              </div>
+            </div>
+            <!-- Table section   -->
+            <table class="overflow-auto">
+              <thead>
+                <tr>
+                    <td>Actions</td>
+                    <td>Invoice No.</td>
+                    <td>Client Name</td>
+                    <td>Project Description</td>
+                    <td>Inv. Date</td>
+                    <td>LPO</td>
+                    <td>Amount(A&D)</td>
+                    <td>Credit</td>
+                    <td>Balance Amount <br>(A&C)</td>
+                    <td>Remarks</td>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- table row 1  -->
+                <tr>
+                  <!-- Dropdown button   -->
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="tableButton dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Action
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Details </a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>INV-QAK-23-128</td>
+                    <td>Prominent star cont. LLC</td>
+                    <td>AL mukathra</td>
+                    <td>25/02/2023</td>
+                    <td>QAK-QTN-/022-0254</td>
+                    <td>16613.27</td>
+                    <td></td>
+                    <td>16613.27</td>
+                    <td></td>
+                </tr>
+                <!-- table row 1  -->
+                <tr>
+                  <!-- Dropdown button   -->
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="tableButton dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Action
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Details </a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>INV-QAK-23-128</td>
+                    <td>Prominent star cont. LLC</td>
+                    <td>AL mukathra</td>
+                    <td>25/02/2023</td>
+                    <td>QAK-QTN-/022-0254</td>
+                    <td>16613.27</td>
+                    <td></td>
+                    <td>16613.27</td>
+                    <td></td>
+                </tr>
+                <!-- table row 2  -->
+                <tr>
+                  <!-- Dropdown button   -->
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="tableButton dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Action
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Details </a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>INV-QAK-23-128</td>
+                    <td>Prominent star cont. LLC</td>
+                    <td>AL mukathra</td>
+                    <td>25/02/2023</td>
+                    <td>QAK-QTN-/022-0254</td>
+                    <td>16613.27</td>
+                    <td></td>
+                    <td>16613.27</td>
+                    <td></td>
+                </tr>
+                <!-- table row 3  -->
+                <tr>
+                  <!-- Dropdown button   -->
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="tableButton dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Action
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Details </a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>INV-QAK-23-128</td>
+                    <td>Prominent star cont. LLC</td>
+                    <td>AL mukathra</td>
+                    <td>25/02/2023</td>
+                    <td>QAK-QTN-/022-0254</td>
+                    <td>16613.27</td>
+                    <td></td>
+                    <td>16613.27</td>
+                    <td></td>
+                </tr>
+                <!-- table row 4  -->
+                <tr>
+                  <!-- Dropdown button   -->
+                  <td>
+                    <div class="dropdown">
+                      <button
+                        class="tableButton dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Action
+                      </button>
+                      <ul
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Details </a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                  <td>INV-QAK-23-128</td>
+                    <td>Prominent star cont. LLC</td>
+                    <td>AL mukathra</td>
+                    <td>25/02/2023</td>
+                    <td>QAK-QTN-/022-0254</td>
+                    <td>16613.27</td>
+                    <td></td>
+                    <td>16613.27</td>
+                    <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="font-family: 'Montserrat', sans-serif; font-weight: bold;" class=" bg-light p-3 rounded mb-3 text-center lh-lg">
+                <p class="d-flex justify-content-between"><span>Total Bill Submitted :</span>  <span>570</span>  </p>
+                <p class="d-flex justify-content-between"><span>Total Amount REcieved :</span>  <span class="text-success">570</span>  </p>
+                <p class="d-flex justify-content-between"><span>Total OutStanding:</span>  <span class="text-danger">570</span>  </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gybBogGz1St8jnQw6cpU/HbERmHgGhdg6i1h4OKsP9wwRaDl8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

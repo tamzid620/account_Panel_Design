@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TextIInvoice3Input</title>
+  </head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .invoice-box1 {
+            /* max-width: 800px; */
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #eee;
+            background-color: #f3f1f1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            line-height: 24px;
+            color: #555;
+        }
+        .invoice-box2 {
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #eee;
+            background-color: #f3f1f1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            line-height: 24px;
+            color: #555;
+        }
+        .parentInput1{
+            margin-left: 58px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput2{
+            margin-left: 73px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput3{
+            margin-left: 78px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput4{
+            margin-left: 51px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput5{
+            margin-left: 85px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput6{
+            margin-left: 67px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput7{
+            margin-left: 42px;
+            padding: 5px;
+            width: 230px;
+        }
+        .parentInput8{
+            margin-left: 15px;
+            padding: 5px;
+            width: 230px;
+        }
+        .childInput{
+            margin-left: 40px;
+            padding: 5px;
+            width: 230px;
+        }
+        .textarea {
+        width: 100%;
+        height: 100px;
+        }
+        .textarea1 {
+        width: 50%;
+        height: 150px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-section div {
+            display: inline-block;
+        }
+        .heading {
+            font-weight: 700;
+        }
+        .content {
+            margin-top: 20px;
+        }
+    </style>
+
+  <body>
+    <div class="invoice-box1">
+      <div class="header-section">
+          <div class="heading">
+              Ref.No: <input class="parentInput1" type="text" name="" id=""><br><br>
+                Date: <input class="parentInput2" type="date" name="" id="">
+          </div>
+      </div>
+      <p class="heading">M/S: <input class="parentInput3" type="text" name="" id=""><br><br>
+        P.O Box: <input class="parentInput4" type="text" name="" id=""><br><br>
+        Tel: <input class="parentInput5" type="number" name="" id=""><br><br>
+        Email: <input class="parentInput6" type="email" name="" id="">
+      </p>
+      <p class="heading">Kind Attn: <input class="parentInput7" type="text" name="" id=""><br><br>
+        Project Name: <input class="parentInput8" type="text" name="" id="">
+      </p><br>
+
+      <p>Dear Sir,</p>
+      <p >With reference to your inquiry, we are pleased to offer our quotation for the subject items. We welcome the opportunity to provide this business solution for you and look forward to establishing a mutually rewarding relationship with your esteemed organization.</p>
+      <p class="heading">Scope of Works:</p>
+      <table>
+          <tr>
+              <th>Sl No.</th>
+              <th>Work Description</th>
+              <th>Qty</th>
+              <th>Unit</th>
+              <th>Unit Rate</th>
+              <th>Total Amount</th>
+          </tr>
+          <tr>
+              <td>1.</td>
+              <td>
+                  <p class="heading"><input class="parentInput" type="text" name="" id=""></p>
+                  <ul>
+                    <textarea class="textarea" placeholder="write something"></textarea>
+                  </ul>
+              </td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="text" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+              <td><input type="number" name="" id=""></td>
+          </tr>
+      </table>
+  </div>
+  <div class="invoice-box2">
+    <div class="header-section">
+    </div>
+    <table>
+        <tr>
+            <th>Sl No.</th>
+            <th>Work Description</th>
+            <th>Qty</th>
+            <th>Unit</th>
+            <th>Unit Rate</th>
+            <th>Total Amount</th>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>
+                <p class="heading"><input class="parentInput" type="text" name="" id=""></p>
+                <ul>
+                  <textarea class="textarea" placeholder="write something"></textarea>
+                </ul>
+            </td>
+            <td><input type="number" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="number" name="" id=""></td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: right;">Total Cost</td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: right;">5% VAT</td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="text-align: right;">Total After Discount</td>
+            <td><input type="number" name="" id=""></td>
+        </tr>
+    </table>
+    <p>Total Amount in Words: AED – Forty Thousand Five Only.</p>
+    <div class="content">
+        <p class="heading">General Condition:</p>
+        <ul>
+          <textarea class="textarea1" placeholder="write something"></textarea>
+        </ul>
+        <p class="heading">Payment Terms:</p>
+        <ul>
+            <!-- <li>100% after work completion.</li>
+            <li>Any kind of retention not applicable.</li> -->
+            <textarea class="textarea1" placeholder="write something"></textarea>
+        </ul>
+        <p>If any discrepancies in the invoice, Client should inform to Qalat-Al-Khaleej Accounts Department within 7 days from the receipt of invoices, unless otherwise we will consider the invoice has been accepted for payment.</p>
+        <p class="heading">Project Duration:</p>
+        <p>To be discussed.</p>
+    </div>
+</div>
+
+  <!-- Bullet point script  -->
+  <script>
+    // Function to handle bullet points in textareas
+    function handleBulletPoints(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        const textarea = event.target;
+        const value = textarea.value;
+        const lines = value.split('\n');
+        const currentLineIndex = getCurrentLineIndex(textarea);
+        const currentLine = lines[currentLineIndex];
+
+        if (isBulletPoint(currentLine)) {
+          // Remove bullet point if current line starts with '• '
+          lines[currentLineIndex] = currentLine.slice(2); // Remove '• '
+        } else {
+          // Insert bullet point if current line doesn't start with '• '
+          lines[currentLineIndex] = '• ' + currentLine; // Add '• '
+        }
+
+        // Insert a new line
+        lines.splice(currentLineIndex + 1, 0, '');
+
+        textarea.value = lines.join('\n');
+        textarea.selectionStart = textarea.selectionEnd = getNewCursorPosition(currentLineIndex + 1);
+      }
+    }
+
+    // Helper functions
+    function getCurrentLineIndex(textarea) {
+      return textarea.value.substr(0, textarea.selectionStart).split('\n').length - 1;
+    }
+
+    function isBulletPoint(line) {
+      return line.trim().startsWith('• ');
+    }
+
+    function getNewCursorPosition(lineIndex) {
+      // Move the cursor to the beginning of the new line
+      const lines = document.querySelectorAll('textarea');
+      let position = 0;
+      for (let i = 0; i < lineIndex; i++) {
+        position += lines[i].value.length + 1; // +1 for the newline character
+      }
+      return position;
+    }
+
+    // Attach event listeners to all textareas
+    document.querySelectorAll('textarea').forEach(textarea => {
+      textarea.addEventListener('keydown', handleBulletPoints);
+    });
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalanceSheet</title>
+</head>
+<style>
+.htmlBody {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.invoice-box {
+  width: 21cm; 
+  height: 29.7cm;
+  margin: 0; /* Remove fixed margins */
+  font-family: "Open Sans", sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden; 
+  position: relative; 
+}
+     .headerImg {
+       width: 150px;
+     }
+     .invoice-header {
+       text-align: center;
+       margin-bottom: 10px;
+     }
+ 
+     .invoice-header h1 {
+       font-size: 24px;
+       margin: 10px 0;
+       color: #004c6d;
+     }
+     .mx-div {
+       margin-left: 40px;
+       margin-right: 40px;
+     }
+     .invoice-table {
+       width: 100%;
+       border-collapse: collapse;
+       margin-top: 10px;
+     }
+ 
+     .invoice-table th,
+     .invoice-table td {
+       border: 1px solid #ddd;
+       padding: 8px;
+       text-align: left;
+       font-size: 14px;
+     }
+ 
+     .invoice-table th {
+       background-color: #004c6d;
+       color: white;
+       font-weight: bold;
+     }
+ 
+     .invoice-table tbody tr:nth-child(even) {
+       background-color: #f9f9f9;
+     }
+ 
+     .invoice-summary {
+       text-align: right;
+       margin-top: 20px;
+     }
+ 
+     .invoice-summary p {
+       margin: 5px 0;
+     }
+ 
+     .invoice-summary p.total {
+       font-weight: bold;
+       color: #004c6d;
+     }
+ 
+     .invoice-footer {
+       text-align: center;
+       color: #777;
+       margin-top: 30px;
+     }
+     .informationDiv {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         gap: 10px;
+         font-size: 14px;
+     }
+     .information1 {
+         width: 50%;
+     }
+     .information2 {
+         width: 50%;
+     }
+     .boldSpan {
+         font-weight: bold;
+         margin-right: 5px;
+     }
+     .extraParagraph {
+        font-weight: 500;
+        text-align: center;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+     }
+   
+</style>
+   <body>
+    <div class="htmlBody" id="invoiceContainer">
+      <div class="invoice-box" id="invoiceTemplate">
+        <!-- header img section  -->
+        
+        <div class="mx-div">
+          <img class="headerImg" src="../assets/Qalaat Al Khaleej.png" alt="" />
+            
+                  <!-- information section  -->
+                  <div class="informationDiv">
+                    <div class="information1">
+                        <p>
+                            <span class="boldSpan">Account Number: </span>
+                            <span>110121</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Account Title: </span>
+                            <span>Abcde</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Account Type: </span>
+                            <span>Mr. Jamie McMaster</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Currency: </span>
+                            <span>Boys Changing Room</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Date of Opening:</span>
+                            <span>10059856233685452</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">CUstomer Code: </span>
+                            <span>Sila</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Adress: </span>
+                            <span>24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square, U.A.E</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Tran. Description: </span>
+                            <span>Not Available</span>
+                        </p>
+                    </div>
+                    <!-- <div class="information2">
+                        <p>
+                            <span class="boldSpan">Terms of payment: </span>
+                            <span>CDC</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Email: </span>
+                            <span>info@qalatalkhaleej.com</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Ref:</span>
+                            <span>PO-111238</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">TRN:</span>
+                            <span>10059856233685452</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Scope of Works: </span>
+                            <span>carry out carpentry works and replace all 50 locks on lockers in girls changing rooms</span>
+                        </p>
+                    </div> -->
+                  </div>
+  
+          <!-- Table section -->
+          <table class="invoice-table" id="invoiceTable">
+            <th class="heading">
+              <th>Sl No</th>
+              <th>Date</th>
+              <th>Treans Code /Chq No</th>
+              <th>Particulars</th>
+              <th>Debit Amount</th>
+              <th>Creadit Amount</th>
+              <th>Balanced Amount</th>
+            </th>
+            <tr>
+              <td>1.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>6.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>7.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>8.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>9.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>10.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>11.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>12.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>13.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>14.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>15.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>16.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>17.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>18.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>19.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>20.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>21.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+            <tr>
+              <td>22.</td>
+              <td>Replacement </td>
+              <td>01</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+              <td>5,000.00</td>
+            </tr>
+          </table>
+          <div class="extraParagraph">
+              <p>
+                 Thanks for banking with us
+             <br>
+                 Plase notify your branch for any discrepcies or irregularities, with 15 days from the date of the statement is correct .This  computer generated statement required no signature.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- script file --------------------------------------------------- -->
+
+    <script>
+      const data = Array.from({ length: 20 }, (_, index) => ({
+          slNo: index + 1,
+          date: 'Replacement',
+          transCode: '01',
+          particulars: '5,000.00',
+          debit: '5,000.00',
+          credit: '5,000.00',
+          balance: '5,000.00'
+      }));
+      
+      function createTableRows(data) {
+          return data.map(row => `
+              <tr>
+                  <td>${row.slNo}</td>
+                  <td>${row.date}</td>
+                  <td>${row.transCode}</td>
+                  <td>${row.particulars}</td>
+                  <td>${row.debit}</td>
+                  <td>${row.credit}</td>
+                  <td>${row.balance}</td>
+              </tr>
+          `).join('');
+      }
+      
+      function paginateTable() {
+          const rowsPerPage = 15;
+          const totalRows = data.length;
+      
+          for (let i = 0; i < totalRows; i += rowsPerPage) {
+              const pageData = data.slice(i, i + rowsPerPage);
+              const invoiceBox = document.createElement('div');
+              invoiceBox.className = 'invoice-box page-content';
+      
+              if (i > 0) {
+                  invoiceBox.innerHTML = `
+                      <div class="mx-div">
+                          <table class="invoice-table">
+                              <thead>
+                                  <tr>
+                                      <th>Sl No</th>
+                                      <th>Date</th>
+                                      <th>Trans Code /Chq No</th>
+                                      <th>Particulars</th>
+                                      <th>Debit Amount</th>
+                                      <th>Credit Amount</th>
+                                      <th>Balance Amount</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  ${createTableRows(pageData)}
+                              </tbody>
+                          </table>
+                          <div class="extraParagraph">
+                              <p>Thanks for banking with us.<br>
+                              Please notify your branch for any discrepancies within 15 days. This is a computer-generated statement and requires no signature.</p>
+                          </div>
+                      </div>
+                  `;
+              } else {
+                  invoiceBox.innerHTML = `
+                      <div class="mx-div">
+                          <img class="headerImg" src="../assets/Qalaat Al Khaleej.png" alt="" />
+                         <div class="informationDiv">
+                    <div class="information1">
+                        <p>
+                            <span class="boldSpan">Account Number: </span>
+                            <span>110121</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Account Title: </span>
+                            <span>Abcde</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Account Type: </span>
+                            <span>Mr. Jamie McMaster</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Currency: </span>
+                            <span>Boys Changing Room</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Date of Opening:</span>
+                            <span>10059856233685452</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">CUstomer Code: </span>
+                            <span>Sila</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Adress: </span>
+                            <span>24th Floor, Al Sila Tower 1, Abu-Dhabi Global Market Square, U.A.E</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Tran. Description: </span>
+                            <span>Not Available</span>
+                        </p>
+                    </div>
+                    <!-- <div class="information2">
+                        <p>
+                            <span class="boldSpan">Terms of payment: </span>
+                            <span>CDC</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Email: </span>
+                            <span>info@qalatalkhaleej.com</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Ref:</span>
+                            <span>PO-111238</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">TRN:</span>
+                            <span>10059856233685452</span>
+                        </p>
+                        <p>
+                            <span class="boldSpan">Scope of Works: </span>
+                            <span>carry out carpentry works and replace all 50 locks on lockers in girls changing rooms</span>
+                        </p>
+                    </div> -->
+                  </div>
+                          <table class="invoice-table">
+                              <thead>
+                                  <tr>
+                                      <th>Sl No</th>
+                                      <th>Date</th>
+                                      <th>Trans Code /Chq No</th>
+                                      <th>Particulars</th>
+                                      <th>Debit Amount</th>
+                                      <th>Credit Amount</th>
+                                      <th>Balance Amount</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  ${createTableRows(pageData)}
+                              </tbody>
+                          </table>
+                          <div class="extraParagraph">
+                              <p>Thanks for banking with us.<br>
+                              Please notify your branch for any discrepancies within 15 days. This is a computer-generated statement and requires no signature.</p>
+                          </div>
+                      </div>
+                  `;
+              }
+      
+              document.getElementById('invoiceContainer').appendChild(invoiceBox);
+          }
+          document.getElementById('invoiceTemplate').remove();
+      }
+      
+      paginateTable();
+      </script>
+
+   </body>
+</html>
