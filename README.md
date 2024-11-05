@@ -5,6 +5,9 @@
 => light blue: #21a1eb ;
 
 => font-family: "Montserrat", sans-serif;
+  overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+
  transition: background 0.3s ease;
 
             .button-width-1 {
