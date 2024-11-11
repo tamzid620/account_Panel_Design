@@ -44,7 +44,7 @@
         border-right: 2px solid #213167 ;
         color: #213167 ;
         font-size: 60px !important;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
     }
     .head-label{
@@ -84,22 +84,23 @@
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
-        width: 50px;
-        background-color: rgba(235 , 235, 235);
-        padding: 1px 0px 2px 0px;
+    width: 50px;
+    background-color: rgba(235 , 235, 235);
+    padding: 1px 0px 2px 0px;
     }
     .passMngIcon:hover{
         background-color: rgba(190, 188, 188, 0.635);
     }
     label {
+        background-color: #f1f1f1 !important;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        font-size: 12px;
+        font-weight: 600;
       text-align: center;
-      width: 25%;
-      font-weight: 600;
-      padding: 10px;
-      background-color: #f1f1f1 !important;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      border-left: 1px solid black;
+      width: 20%;
+      padding: 9px 6px 6px 6px;
     } 
     .formInput {
       flex-grow: 1;
@@ -110,6 +111,34 @@
       border-bottom: 1px solid black;
       border-right: 1px solid black;
       border-left: none;
+    }
+    .label-1{
+        background-color: #f1f1f1 !important;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        font-size: 12px;
+        font-weight: 700;
+      text-align: center;
+      width: 20% ;
+      padding: 9px 6px 7px 6px;
+    }
+    .formInput-1{
+      width: 75%;
+      padding: 5px;
+      font-size: 16px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      margin-left: -4px;
+      border-left: none;
+    }
+    .form-group-single{
+        background-color: #213167 ;
+        width: 50%;
+    }
+    .form-group-single div{
+       padding: 10px 5px 10px 20px;
     }
     .form-group {
         margin-bottom: 20px;
@@ -128,12 +157,6 @@
         margin-right: 0;
     }
     
-    .form-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-    
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group textarea {
@@ -149,6 +172,28 @@
         height: 100px;
     }
 
+    /* Media Query for Small device  */
+    @media screen and (max-width: 576px) {
+        .invoice-header-div{
+        display: grid;
+      grid-template-columns:  1fr;
+      gap: 20px;
+      align-items: center;
+      padding: 20px;
+    }
+    .invoice-header-heading{
+        border-right: none ;
+    }
+    .head-input-invoice {
+        padding: 29px 0px 16px 0px;
+        height: 40px ;
+        margin-top: 25px;
+    }
+    .passMngIcon {
+        margin-top: -15px;
+    padding: 10px 0px 10px 0px;
+}
+    }
     
     @media (max-width: 768px) {
         .form-group {
@@ -253,6 +298,7 @@
 <body>
     <div class="invoice-container">
         <div>
+            <!-- Header section  -->
             <div class="invoice-header-div">
                 <div class="invoice-header-heading">Invoice</div>
                <div class="header-input">
@@ -273,15 +319,24 @@
             </div>
         
             <form>
-
+                <div class="form-group-single">
+                    <div>
+                        <label class="label-1" for="trn1">Trn1:</label>
+                        <input type="text" id="trn1" name="trn1" class="formInput-1" required>
+                    </div>
+                </div>
+                <div class="form-group-single">
+                    <div>
+                        <label class="label-1" for="trn2">Trn2:</label>
+                        <input type="text" id="trn2" name="trn2" class="formInput-1" required>
+                    </div>
+                </div>
+                
                 <div class="form-group">
                     <div>
                         <label for="to">To:</label>
                         <input type="text" id="to" name="to" class="formInput" required>
                     </div>
-                </div>
-                
-                <div class="form-group">
                     <div>
                         <label for="phoneNo">Phone No:</label>
                         <input type="text" id="phoneNo" name="phoneNo" class="formInput" required>
@@ -315,14 +370,6 @@
                     <div>
                         <label for="nameAttn">Name/Attn:</label>
                         <input type="text" id="nameAttn" name="nameAttn" class="formInput" required>
-                    </div>
-                    <div>
-                        <label for="trn1">Trn1:</label>
-                        <input type="text" id="trn1" name="trn1" class="formInput" required>
-                    </div>
-                    <div>
-                        <label for="trn2">Trn2:</label>
-                        <input type="text" id="trn2" name="trn2" class="formInput" required>
                     </div>
                 </div>
                 
