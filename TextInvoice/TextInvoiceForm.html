@@ -43,7 +43,7 @@
     .invoice-header-heading{
         border-right: 2px solid #213167 ;
         color: #213167 ;
-        font-size: 60px !important;
+        font-size: 35px !important;
         font-weight: 700;
         text-transform: uppercase;
     }
@@ -84,9 +84,9 @@
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
-    width: 50px;
+    width: 53px;
     background-color: rgba(235 , 235, 235);
-    padding: 1px 0px 2px 0px;
+    padding-top: 2px;
     }
     .passMngIcon:hover{
         background-color: rgba(190, 188, 188, 0.635);
@@ -102,16 +102,6 @@
       width: 20%;
       padding: 9px 6px 6px 6px;
     } 
-    .formInput {
-      flex-grow: 1;
-      width: 70%;
-      padding: 10px;
-      font-size: 16px;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      border-left: none;
-    }
     .label-1{
         background-color: #f1f1f1 !important;
         border-top: 1px solid black;
@@ -123,16 +113,6 @@
       width: 20% ;
       padding: 9px 6px 7px 6px;
     }
-    .formInput-1{
-      width: 75%;
-      padding: 5px;
-      font-size: 16px;
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-      margin-left: -4px;
-      border-left: none;
-    }
     .label-2{
         background-color: #f1f1f1 !important;
         border-top: 1px solid black;
@@ -143,9 +123,43 @@
       text-align: center;
       width: 28% ;
       padding: 9px 6px 7px 6px;
+    } 
+    .label-3{
+        background-color: #f1f1f1 !important;
+        border-top: 1px solid black;
+        border-bottom: none ;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        margin-left: -4px;
+        font-size: 12px;
+        font-weight: 700;
+      text-align: center;
+      width: 100% ;
+      padding: 9px 6px 7px 6px;
     }
-    .form-group .formInput-2[type="text"]{
-      width: 67%;
+    .label-4 {
+        background-color: #f1f1f1 !important;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        font-size: 12px;
+        font-weight: 600;
+      text-align: center;
+      width: 37%;
+      margin-bottom: 3px;
+    } 
+    .formInput {
+      flex-grow: 1;
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      border-left: none;
+    }
+    .formInput-1{
+      width: 75%;
       padding: 5px;
       font-size: 16px;
       border-top: 1px solid black;
@@ -153,6 +167,38 @@
       border-right: 1px solid black;
       margin-left: -4px;
       border-left: none;
+    }
+    .form-group .formInput-2[type="text"]{
+      width: 71%;
+      padding: 5px;
+      font-size: 16px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      margin-left: -4px;
+      border-left: none;
+    }
+    .form-group .formInput-3[type="text"]  {
+        border-top: none ;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        height: 150px;
+        
+    }
+    .formInput-4[type="text"]  {
+      width: 60%;
+      padding: 5px 0px 4px 0px;
+      font-size: 16px;
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      border-left: none;
+      margin-left: -4px;
     }
     .form-group-single{
         margin-left: -20px;
@@ -168,16 +214,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-    
     .form-group > div {
         flex: 1;
         margin-right: 10px;
         margin-bottom: 10px;
     }
-    
-    .form-group input[type="text"],
-    .form-group input[type="email"]  {
-        width: 75%;
+    .form-group input[type="text"], .form-group input[type="email"]  {
+        width: 79%;
         padding: 7px 0px 5px 0px;
         border: 1px solid #ccc;
         box-sizing: border-box;
@@ -188,36 +231,9 @@
       margin-left: -4px;
       border-left: none;
     }
-    .label-3{
-        background-color: #f1f1f1 !important;
-        border-top: 1px solid black;
-        border-bottom: none ;
-        border-right: 1px solid black;
-        border-left: 1px solid black;
-        margin-left: -4px;
-        font-size: 12px;
-        font-weight: 700;
-      text-align: center;
-      width: 100% ;
-      padding: 9px 6px 7px 6px;
-    }
-    .form-group .addressScope[type="text"]  {
-        border-top: none ;
-        border-bottom: 1px solid black;
-        border-right: 1px solid black;
-        border-left: 1px solid black;
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        font-size: 14px;
-        height: 150px;
-        
-    }
-    
-    .form-group textarea {
-        height: 100px;
-    }
-   
+   .invoice-section2{
+    margin-right: 10px;
+   }
     .invoice-section2 input{
         width: 100% ; 
         padding: 8px;
@@ -241,6 +257,10 @@
         border: 1px solid #d1cdcd;
         text-align: left;
     }
+    .amount-section-div{
+        display: flex;
+        justify-content: space-between;
+    }
     .submit-button {
         margin-top: -50px;
         display: block;
@@ -253,33 +273,6 @@
         cursor: pointer;
         font-size: 16px;
     }
-      
-      .form-group1 {
-        display: flex;
-        justify-content: flex-end;
-        width: 60%;
-    }
-    
-    .form-group1 > div {
-        flex: 1;
-        margin-left: 10px; 
-    }
-    
-    .form-group1 label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-    
-    .form-group1 input[type="text"] {
-        width: 100%; 
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-size: 14px;
-        margin-left: -30px;
-    }
     .dateinput {
         width: 100%; 
         padding: 10px;
@@ -288,13 +281,15 @@
         box-sizing: border-box;
         font-size: 14px;
     }
-    .form-group1Label{
-        width: 60% ;
-       
-    }
-    .form-group2{
+    .form-group-1{
         visibility: hidden;
-        width: 30%;
+        width: 50%;
+        margin-bottom: 80px;
+    }
+    .form-group-2{
+        visibility: visible;
+        width: 50%;
+        margin-bottom: 80px;
     }
     
     /* Media Query for Small device  */
@@ -306,6 +301,7 @@
       align-items: center;
     }
     .invoice-header-heading{
+        font-size: 30px !important;
         border-right: none ;
     }
     .head-input-invoice {
@@ -314,7 +310,7 @@
         margin-top: 25px;
     }
     .passMngIcon {
-        margin-top: -15px;
+     margin-top: -15px;
     padding: 10px 0px 10px 0px;
 }
 .form-group-single{
@@ -327,6 +323,9 @@
         font-size: 10px;
       padding: 11px 6px 8px 6px;
     }
+    .invoice-section2 ,.invoice-table{
+        overflow: auto !important;
+    }
     }
      /* Media Query for Medium device  */
     @media (max-width: 768px) {
@@ -338,6 +337,9 @@
             margin-right: 0;
             margin-bottom: 10px;
         }
+        .invoice-section2 ,.invoice-table{
+        overflow: auto !important;
+    }
     }
 </style>
 
@@ -346,7 +348,7 @@
         <div>
             <!-- Header section  -->
             <div class="invoice-header-div">
-                <div class="invoice-header-heading">Invoice</div>
+                <div class="invoice-header-heading">Create Invoice</div>
                <div class="header-input">
                 <div>
                     <label class="head-label" for="date">Date:</label>
@@ -370,17 +372,7 @@
                         <label class="label-1" for="trn1">Trn1:</label>
                         <input type="text" id="trn1" name="trn1" class="formInput-1" required>
                     </div>
-                </div>  
-                <div class="form-group">
-                    <div>
-                        <label for="LPO">LPO:</label>
-                        <input type="text" id="LPO" name="LPO" class="formInput" required>
-                    </div>
-                    <div>
-                        <label class="label-2" for="projectName">Project Name:</label>
-                        <input type="text" id="projectName" name="projectName" class="formInput-2" required>
-                    </div>
-                </div>
+                </div> 
                 <div class="form-group">
                     <div>
                         <label for="to">To:</label>
@@ -389,6 +381,16 @@
                     <div>
                         <label class="label-2" for="phoneNo">Phone No:</label>
                         <input type="text" id="phoneNo" name="phoneNo" class="formInput-2" required>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <div>
+                        <label for="LPO">LPO:</label>
+                        <input type="text" id="LPO" name="LPO" class="formInput" required>
+                    </div>
+                    <div>
+                        <label class="label-2" for="projectName">Project Name:</label>
+                        <input type="text" id="projectName" name="projectName" class="formInput-2" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -420,11 +422,11 @@
                 <div class="form-group">
                     <div>
                         <label class="label-3" for="address">Address:</label>
-                        <input class="addressScope" type="text" id="address" name="address" required></input>
+                        <input class="formInput-3" type="text" id="address" name="address" required></input>
                     </div>
                     <div>
                         <label class="label-3" for="scopeOfWork">Scope of Work:</label>
-                        <input class="addressScope" type="text" id="scopeOfWork" name="scopeOfWork" required></input>
+                        <input class="formInput-3" type="text" id="scopeOfWork" name="scopeOfWork" required></input>
                     </div>
                 </div>
     
@@ -449,42 +451,42 @@
                             </tr>
                         </tbody>
                     </table>
-                    <!------------- lkhaodghloashgdloashgoh------------- -->
-                    <div class="d-flex justify-content-between">
-                        <div class="form-group2">
+                </div>
+                    <!------------- Amount Section  ------------- -->
+                    <div class="amount-section-div">
+                        <div class="form-group-1">
                             <div>
                             <div>
-                                <label for="totalAmount">Total Amount:</label>
-                                <input type="text" id="totalAmount" name="totalAmount" required>
+                                <label class="label-4" for="totalAmount">Total Amount:</label>
+                                <input class="formInput-4" type="text" id="totalAmount" name="totalAmount" required>
                             </div>
                             <div>
-                                <label for="vatAmount">+5% vat Amount:</label>
-                                <input type="text" id="vatAmount" name="vatAmount" required>
+                                <label class="label-4" for="vatAmount">+5% vat Amount:</label>
+                                <input class="formInput-4" type="text" id="vatAmount" name="vatAmount" required>
                             </div>
                             <div>
-                                <label for="netAmount">Total Net Amount:</label>
-                                <input type="text" id="netAmount" name="netAmount" required>
+                                <label class="label-4" for="netAmount">Total Net Amount:</label>
+                                <input class="formInput-4" type="text" id="netAmount" name="netAmount" required>
                             </div>
                         </div>
                         </div>
-                        <div class="form-group1">
+                        <div class="form-group-2">
                             <div>
-                            <div class="d-flex ">
-                                <label class="form-group1Label" for="totalAmount">Total Amount:</label>
-                                <input type="text" id="totalAmount" name="totalAmount" required>
+                            <div>
+                                <label class="label-4" for="totalAmount">Total Amount:</label>
+                                <input class="formInput-4" type="text" id="totalAmount" name="totalAmount" required>
                             </div>
-                            <div class="d-flex ">
-                                <label class="form-group1Label" for="vatAmount">+5% vat Amount:</label>
-                                <input type="text" id="vatAmount" name="vatAmount" required>
+                            <div>
+                                <label class="label-4" for="vatAmount">+5% vat Amount:</label>
+                                <input class="formInput-4" type="text" id="vatAmount" name="vatAmount" required>
                             </div>
-                            <div class="d-flex ">
-                                <label class="form-group1Label" for="netAmount">Total Net Amount:</label>
-                                <input type="text" id="netAmount" name="netAmount" required>
+                            <div>
+                                <label class="label-4" for="netAmount">Total Net Amount:</label>
+                                <input class="formInput-4" type="text" id="netAmount" name="netAmount" required>
                             </div>
                         </div>
                         </div>
                     </div>
-                </div>
                 </div>
         
               
