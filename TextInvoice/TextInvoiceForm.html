@@ -144,8 +144,7 @@
       width: 28% ;
       padding: 9px 6px 7px 6px;
     }
-    .form-group .formInput-2[type="text"]
-    {
+    .form-group .formInput-2[type="text"]{
       width: 67%;
       padding: 5px;
       font-size: 16px;
@@ -189,63 +188,34 @@
       margin-left: -4px;
       border-left: none;
     }
-    .form-group textarea {
+    .label-3{
+        background-color: #f1f1f1 !important;
+        border-top: 1px solid black;
+        border-bottom: none ;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        margin-left: -4px;
+        font-size: 12px;
+        font-weight: 700;
+      text-align: center;
+      width: 100% ;
+      padding: 9px 6px 7px 6px;
+    }
+    .form-group .addressScope[type="text"]  {
+        border-top: none ;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
         width: 100%;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
         box-sizing: border-box;
         font-size: 14px;
+        height: 150px;
+        
     }
     
     .form-group textarea {
         height: 100px;
-    }
-
-    /* Media Query for Small device  */
-    @media screen and (max-width: 576px) {
-        .invoice-header-div{
-        display: grid;
-      grid-template-columns:  1fr;
-      gap: 20px;
-      align-items: center;
-    }
-    .invoice-header-heading{
-        border-right: none ;
-    }
-    .head-input-invoice {
-        padding: 29px 0px 16px 0px;
-        height: 40px ;
-        margin-top: 25px;
-    }
-    .passMngIcon {
-        margin-top: -15px;
-    padding: 10px 0px 10px 0px;
-}
-.form-group-single{
-    margin-left: 0px;
-    display: flex;
-    justify-content: center;
-        width: 100%;
-    }
-    .label-2{
-        font-size: 10px;
-      padding: 11px 6px 8px 6px;
-    }
-    }
-    
-    @media (max-width: 768px) {
-        .form-group {
-            flex-direction: column;
-        }
-        
-        .form-group > div {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-    }
-    .addressScope{
-        height: 150px;
     }
    
     .invoice-section2 input{
@@ -286,7 +256,7 @@
         cursor: pointer;
         font-size: 16px;
     }
-      /* Adjusting form-group1 to justify-content-end */
+      
       .form-group1 {
         display: flex;
         justify-content: flex-end;
@@ -295,7 +265,7 @@
     
     .form-group1 > div {
         flex: 1;
-        margin-left: 10px; /* Adjust spacing between items if needed */
+        margin-left: 10px; 
     }
     
     .form-group1 label {
@@ -305,7 +275,7 @@
     }
     
     .form-group1 input[type="text"] {
-        width: 100%; /* Ensure input fields take full width */
+        width: 100%; 
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -314,7 +284,7 @@
         margin-left: -30px;
     }
     .dateinput {
-        width: 100%; /* Ensure input fields take full width */
+        width: 100%; 
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
@@ -328,6 +298,49 @@
     .form-group2{
         visibility: hidden;
         width: 30%;
+    }
+    
+    /* Media Query for Small device  */
+    @media screen and (max-width: 576px) {
+        .invoice-header-div{
+        display: grid;
+      grid-template-columns:  1fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .invoice-header-heading{
+        border-right: none ;
+    }
+    .head-input-invoice {
+        padding: 29px 0px 16px 0px;
+        height: 40px ;
+        margin-top: 25px;
+    }
+    .passMngIcon {
+        margin-top: -15px;
+    padding: 10px 0px 10px 0px;
+}
+.form-group-single{
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+        width: 100%;
+    }
+    .label-2{
+        font-size: 10px;
+      padding: 11px 6px 8px 6px;
+    }
+    }
+     /* Media Query for Medium device  */
+    @media (max-width: 768px) {
+        .form-group {
+            flex-direction: column;
+        }
+        
+        .form-group > div {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
 </style>
 
@@ -409,12 +422,12 @@
                 </div>
                 <div class="form-group">
                     <div>
-                        <label for="address">Address:</label>
-                        <textarea class="addressScope" type="text"  id="address" name="address" required></textarea>
+                        <label class="label-3" for="address">Address:</label>
+                        <input class="addressScope" type="text" id="address" name="address" required></input>
                     </div>
                     <div>
-                        <label for="scopeOfWork">Scope of Work:</label>
-                        <textarea class="addressScope" type="text" id="scopeOfWork" name="scopeOfWork" required></textarea>
+                        <label class="label-3" for="scopeOfWork">Scope of Work:</label>
+                        <input class="addressScope" type="text" id="scopeOfWork" name="scopeOfWork" required></input>
                     </div>
                 </div>
     
