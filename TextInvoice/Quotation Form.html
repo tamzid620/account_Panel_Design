@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotation Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: rgb(223, 220, 220);
+  }
+
+  .quotation-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .invoice-box1 {
+    margin: 0px 60px 0px 60px
+  }
+
+  .form-group {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-group>div {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .form-group-textarea{
+    display: flex !important;
+  }
+
+  label {
+    background-color: #f1f1f1 !important;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-left: 1px solid #d1cdcd;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    width: 20% !important;
+    padding: 11px 15px 10px 15px;
+  }
+
+  .label-1 {
+    background-color: #f1f1f1 !important;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-left: 1px solid #d1cdcd;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    width: 20% !important;
+    padding: 11px 15px 10px 15px;
+  }
+
+  .formInput {
+    width: 66%;
+    padding: 10px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-1 {
+    width: 77%;
+    padding: 9px 0px 8px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-2 {
+    width: 56%;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-3 {
+    width: 79%;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-4 {
+    width: 70%;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-5 {
+    width: 81%;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-6 {
+    width: 65%;
+    padding: 10px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .formInput-7 {
+    width: 68%;
+    padding: 10px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+  }
+
+  .invoice-section2 {
+    margin-right: 10px;
+  }
+
+  .invoice-table input {
+    width: 90%;
+    padding: 8px;
+    border: none;
+  }
+
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  .invoice-table th {
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 8px;
+    text-align: center;
+    background: #21a1eb;
+    color: white;
+  }
+
+  .invoice-table td {
+    margin-bottom: 20px;
+    border: 1px solid #d1cdcd;
+    text-align: left;
+  }
+
+  .form-group-1 {
+    visibility: hidden;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .form-group-2 {
+    visibility: visible;
+    width: 50%;
+    margin-bottom: 80px;
+  }
+
+  .amount-section-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -50px;
+  }
+
+  .label-2 {
+    background-color: #21a1eb !important;
+    color: white !important;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-left: 1px solid #d1cdcd;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: center;
+    width: 39% !important;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+
+  .label-3 {
+    width: 100% !important;
+    background-color: #213167 !important;
+    color: white !important;
+    border-top: 1px solid rgb(142, 140, 140);
+    border-bottom: none;
+    border-right: 1px solid rgb(142, 140, 140);
+    border-left: 1px solid rgb(142, 140, 140);
+    margin-left: -4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    /* padding: 9px 6px 7px 6px; */
+    padding: 9px 118px 7px 116px;
+  }
+
+  .label-4 {
+    width: 100% !important;
+    background-color: #213167 !important;
+    color: white !important;
+    border-top: 1px solid rgb(142, 140, 140);
+    border-bottom: none;
+    border-right: 1px solid rgb(142, 140, 140);
+    border-left: 1px solid rgb(142, 140, 140);
+    margin-left: -4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    /* padding: 9px 6px 7px 6px; */
+    padding: 9px 126px 7px 125px;
+  }
+
+  .formInput-8 {
+    width: 63%;
+    padding: 7px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+    margin-bottom: 10px;
+  }
+
+  .formInput-9 {
+    width: 60%;
+    padding: 7px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+    margin-bottom: 10px;
+  }
+
+  .formInput-10,
+  .formInput-11 {
+    width: 78%;
+    padding: 7px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+    margin-bottom: 10px;
+  }
+
+  .formInput-12 {
+    width: 56%;
+    padding: 7px 0px 10px 0px;
+    font-size: 16px;
+    border-top: 1px solid #d1cdcd;
+    border-bottom: 1px solid #d1cdcd;
+    border-right: 1px solid #d1cdcd;
+    border-left: none;
+    margin-left: -4px;
+    margin-bottom: 10px;
+  }
+
+  .formInput-13 {
+    border-top: none;
+    border-bottom: 1px solid rgb(142, 140, 140);
+    border-right: 1px solid rgb(142, 140, 140);
+    border-left: 1px solid rgb(142, 140, 140);
+    width: 97%;
+    box-sizing: border-box;
+    font-size: 14px;
+    height: 150px;
+    margin-top: 6px;
+    margin-left: -4px;
+  }
+
+  .childInput {
+    margin-left: 40px;
+    padding: 5px;
+    width: 230px;
+  }
+
+  .heading {
+    font-weight: 700;
+  }
+
+
+  /* Media Query for Medium  device  */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .formInput {
+      width: 65%;
+      padding-top: 11px;
+    }
+
+    .invoice-box1 {
+      margin: 0px;
+    }
+
+    .formInput-8 {
+      width: 60%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-9 {
+      width: 57%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-10,
+    .formInput-11 {
+      width: 75%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-12 {
+      width: 52%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .label-3 {
+      padding: 9px 109px 7px 108px;
+    }
+
+    .label-4 {
+      padding: 9px 117px 7px 117px;
+    }
+  }
+
+  /* Media Query for Small device  */
+  @media screen and (max-width: 576px) {
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .invoice-box1 {
+      margin: 0px;
+    }
+
+    label {
+      background-color: #f1f1f1 !important;
+      border-top: 1px solid #d1cdcd;
+      border-bottom: 1px solid #d1cdcd;
+      border-left: 1px solid #d1cdcd;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      width: 20% !important;
+      padding: 11px 15px 10px 15px;
+    }
+
+    .label-1 {
+      background-color: #f1f1f1 !important;
+      border-top: 1px solid #d1cdcd;
+      border-bottom: 1px solid #d1cdcd;
+      border-left: 1px solid #d1cdcd;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      width: 20% !important;
+      padding: 11px 15px 10px 15px;
+    }
+
+    .formInput {
+      width: 65%;
+      padding-top: 11px;
+    }
+
+    .formInput-1 {
+      width: 76%;
+    }
+
+    .formInput-2 {
+      width: 55%;
+      padding: 11px 0px 10px 0px;
+    }
+
+    .formInput-3 {
+      width: 79%;
+      padding: 11px 0px 10px 0px;
+    }
+
+    .formInput-4 {
+      width: 69%;
+      padding: 11px 0px 10px 0px;
+    }
+
+    .formInput-5 {
+      width: 81%;
+      padding: 11px 0px 10px 0px;
+    }
+
+    .formInput-6 {
+
+      width: 65%;
+      padding: 11px 0px 10px 0px;
+    }
+
+    .formInput-7 {
+      width: 68%;
+      padding-top: 11px;
+    }
+
+    .invoice-section2,
+    .invoice-table {
+      overflow: auto !important;
+    }
+
+    .form-group-1 {
+      visibility: hidden;
+      width: 0%;
+      margin-bottom: -60px;
+    }
+
+    .form-group-2 {
+      visibility: visible;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .formInput-8 {
+      width: 59%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-9 {
+      width: 56%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-10 {
+      width: 76%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-11 {
+      width: 75%;
+      padding: 9px 0px 9px 0px;
+    }
+
+    .formInput-12 {
+      width: 51%;
+      padding: 9px 0px 9px 0px;
+    }
+    .form-group-textarea{
+      display: grid !important;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: center;
+  }
+    .label-3 {
+      padding: 9px 99px 7px 100px;
+    }
+    
+    .label-4 {
+      padding: 9px 106px 7px 110px;
+    }
+    .formInput-13 {
+    width: 100%;
+  }
+  }
+</style>
+
+<body>
+  <div class="quotation-container">
+    <div class="invoice-box1">
+      <div class="form-group">
+        <div>
+          <label for="ref-no">Ref.No:</label>
+          <input type="text" id="ref-no" name="ref-no" class="formInput" required>
+        </div>
+        <div>
+          <label class="label-1" for="date">Date:</label>
+          <input type="date" id="date" name="date" class="formInput-1" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <label for="m-s">M/S:</label>
+          <input type="text" id="m-s" name="m-s" class="formInput-3" required>
+        </div>
+        <div>
+          <label class="" for="po-box">P.O Box:</label>
+          <input type="text" id="po-box" name="po-box" class="formInput-4" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <label for="tek">Tel:</label>
+          <input type="text" id="tel" name="tel" class="formInput-5" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="formInput-7" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <label class="" for="kind-attn">Kind Attn:</label>
+          <input type="text" id="kind-attn" name="kind-attn" class="formInput-6" required>
+        </div>
+        <div>
+          <label class="" for="project-name">Project Name:</label>
+          <input type="text" id="project-name" name="project-name" class="formInput-2" required>
+        </div>
+      </div>
+    </div>
+    <div>
+
+      <p class="heading">Dear Sir,</p>
+      <p>With reference to your inquiry, we are pleased to offer our quotation for the subject items. We welcome the
+        opportunity to provide this business solution for you and look forward to establishing a mutually rewarding
+        relationship with your esteemed organization.</p>
+      <p class="heading">Scope of Works:</p>
+
+      <div class="invoice-section2">
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>SR.</th>
+              <th>Description</th>
+              <th>Qty.</th>
+              <th>Unit Price</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><input id="description" name="description" rows="2" required></input></td>
+              <td><input type="number" id="quantity" name="quantity" required></td>
+              <td><input type="number" id="unit-price" name="unit-price" step="0.01" required></td>
+              <td><input type="number" id="amount" name="amount" step="0.01" required></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!------------- Amount Section  ------------- -->
+      <div class="amount-section-div">
+        <div class="form-group-1">
+          <div>
+            <div>
+              <label class="label-2" for="totalAmount">Total Amount:</label>
+              <input class="formInput-8" type="text" id="totalAmount" name="totalAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="vatAmount">+5% vat Amount:</label>
+              <input class="formInput-9" type="text" id="vatAmount" name="vatAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="vatAmount">To Pay:</label>
+              <input class="formInput-10" type="text" id="vatAmount" name="vatAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="vatAmount">Credit:</label>
+              <input class="formInput-11" type="text" id="vatAmount" name="vatAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="netAmount">Total Net Amount:</label>
+              <input class="formInput-12" type="text" id="netAmount" name="netAmount" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-2">
+          <div>
+            <div>
+              <label class="label-2" for="totalAmount">Total Amount:</label>
+              <input class="formInput-8" type="text" id="totalAmount" name="totalAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="vatAmount">+5% vat Amount:</label>
+              <input class="formInput-9" type="text" id="vatAmount" name="vatAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="vatAmount">To Pay:</label>
+              <input class="formInput-10" type="text" id="vatAmount" name="vatAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="vatAmount">Credit:</label>
+              <input class="formInput-11" type="text" id="vatAmount" name="vatAmount" required>
+            </div>
+            <div>
+              <label class="label-2" for="netAmount">Total Net Amount:</label>
+              <input class="formInput-12" type="text" id="netAmount" name="netAmount" required>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="form-group-textarea">
+        <div>
+          <label class="label-3" for="address">General Condition:</label>
+          <textarea class="formInput-13" type="text" id="address" name="address" required></textarea>
+        </div>
+        <div>
+          <label class="label-4" for="scopeOfWork">Payment Terms:</label>
+          <textarea class="formInput-13" type="text" id="scopeOfWork" name="scopeOfWork" required></textarea>
+        </div>
+      </div>
+
+      <p>If any discrepancies in the invoice, Client should inform to Qalat-Al-Khaleej Accounts Department within 7
+        days from the receipt of invoices, unless otherwise we will consider the invoice has been accepted for
+        payment.</p>
+      <p class="heading">Project Duration:</p>
+      <p>To be discussed.</p>
+  </div>
+
+  <!-- Bullet point script  -->
+  <script>
+    // Function to handle bullet points in textareas
+    function handleBulletPoints(event) {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        const textarea = event.target;
+        const value = textarea.value;
+        const lines = value.split('\n');
+        const currentLineIndex = getCurrentLineIndex(textarea);
+        const currentLine = lines[currentLineIndex];
+
+        if (isBulletPoint(currentLine)) {
+          // Remove bullet point if current line starts with '• '
+          lines[currentLineIndex] = currentLine.slice(2); // Remove '• '
+        } else {
+          // Insert bullet point if current line doesn't start with '• '
+          lines[currentLineIndex] = '• ' + currentLine; // Add '• '
+        }
+
+        // Insert a new line
+        lines.splice(currentLineIndex + 1, 0, '');
+
+        textarea.value = lines.join('\n');
+        textarea.selectionStart = textarea.selectionEnd = getNewCursorPosition(currentLineIndex + 1);
+      }
+    }
+
+    // Helper functions
+    function getCurrentLineIndex(textarea) {
+      return textarea.value.substr(0, textarea.selectionStart).split('\n').length - 1;
+    }
+
+    function isBulletPoint(line) {
+      return line.trim().startsWith('• ');
+    }
+
+    function getNewCursorPosition(lineIndex) {
+      // Move the cursor to the beginning of the new line
+      const lines = document.querySelectorAll('textarea');
+      let position = 0;
+      for (let i = 0; i < lineIndex; i++) {
+        position += lines[i].value.length + 1; // +1 for the newline character
+      }
+      return position;
+    }
+
+    // Attach event listeners to all textareas
+    document.querySelectorAll('textarea').forEach(textarea => {
+      textarea.addEventListener('keydown', handleBulletPoints);
+    });
+  </script>
+
+</body>
+
+</html>
